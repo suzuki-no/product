@@ -1,0 +1,63 @@
+■開発環境
+VirtualBox + Vagrant + Homestead + Composer
+基本↓を参照　
+https://qiita.com/7968/items/97dd634608f37892b18a
+https://qiita.com/Bmouthf/items/2a209fb731a81d92a4b4
+
+■開発ディレクトリ
+~/git/product/app
+
+■GitHub
+メール: suzukino.suzuki.yuichi@gmail.com
+パス: suzuki!15no
+
+
+■webpackでjs,scssをコンパイルする場合の対応
+上記のサイトどおりではコンパイルは通らないので以下を確認する。
+前提：
+①vagrant ssh（ゲスト）では行わない。ホストで行う。
+②ホストにnode.jsをインストールしておく
+https://nodejs.org/en/download/
+③npmのキャッシュを消してjsモジュール群をインストールする
+npm cache clear --force
+npm install
+npm install webpack
+④package.jsonに”dependencies:{webpack}”の項目が追加される
+⑤動作確認
+npm run dev
+
+開発環境でのコンパイルは
+npm run dev
+監視するには
+npm run watch
+npm run watch-poll
+本番環境では
+npm run production
+
+■Mysql--仮想サーバーのmysqlにlaravel用のユーザーとデータベースを作成する。
+vagrant ssh
+①仮想サーバーの作業ディレクトリに移動
+/home/vagrant/code/Laravel
+②root権限でmysqlに入る
+mysql -uroot
+③ユーザーを作成して権限を与える。
+create user 'laravel' identified by 'La@ra5el';
+grant all on laravel. * to 'laravel';
+exit;
+④作成したユーザーでmysqlに入ってデータベースを作成する。
+mysql -ularavel -pLa@ra5el
+create database laravel;
+exit;
+⑤作業ディレクトリにある.envを編集する。
+DB_DATABASE=laravel
+DB_USERNAME=laravel
+DB_PASSWORD=La@ra5el
+⑥モデル、コントローラーを作成する（サンプルとしてTodo）
+php artisan make:model Todo -m -c -r
+⑦database/migrationsに作成したphpに作成するテーブル定義を編集しマイグレーションする。
+一旦作られてるテーブルを全て削除するのはこっち
+php artisan migrate:fresh
+新規作成する場合はこっち
+php artisan migrate
+追加作成する場合はこっち
+php artisan migrate:refresh
