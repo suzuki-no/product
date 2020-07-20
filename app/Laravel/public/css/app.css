@@ -1,0 +1,476 @@
+.fsr0 {
+  font-size: 1rem;
+}
+
+.fsr1 {
+  font-size: 1.1rem;
+}
+
+.fsrS {
+  font-size: 1.2rem;
+}
+
+.fsr3 {
+  font-size: 1.3rem;
+}
+
+.fsr4 {
+  font-size: 1.4rem;
+}
+
+.fsrM {
+  font-size: 1.5rem;
+}
+
+.fsr6 {
+  font-size: 1.6rem;
+}
+
+.fsr7 {
+  font-size: 1.7rem;
+}
+
+.fsrL {
+  font-size: 1.8rem;
+}
+
+.fsrXL {
+  font-size: 2rem;
+}
+
+.fsp0 {
+  font-size: 10px;
+}
+
+.fsp1 {
+  font-size: 11px;
+}
+
+.fspS {
+  font-size: 12px;
+}
+
+.fsp3 {
+  font-size: 13px;
+}
+
+.fsp4 {
+  font-size: 14px;
+}
+
+.fspM {
+  font-size: 15px;
+}
+
+.fsp6 {
+  font-size: 16px;
+}
+
+.fsp7 {
+  font-size: 17px;
+}
+
+.fspL {
+  font-size: 18px;
+}
+
+.fspXL {
+  font-size: 2px;
+}
+
+.mAuto {
+  margin: auto;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.m5 {
+  margin: 5px;
+}
+
+.m10 {
+  margin: 10px;
+}
+
+.m15 {
+  margin: 15px;
+}
+
+.m20 {
+  margin: 20px;
+}
+
+.m25 {
+  margin: 25px;
+}
+
+.m30 {
+  margin: 30px;
+}
+
+.mx5 {
+  margin: 5px auto;
+}
+
+.mx10 {
+  margin: 10px auto;
+}
+
+.mx15 {
+  margin: 15px auto;
+}
+
+.mx20 {
+  margin: 20px auto;
+}
+
+.mx25 {
+  margin: 25px auto;
+}
+
+.mx30 {
+  margin: 30px auto;
+}
+
+.my5 {
+  margin: auto 5px;
+}
+
+.my10 {
+  margin: auto 10px;
+}
+
+.my15 {
+  margin: auto 15px;
+}
+
+.my20 {
+  margin: auto 20px;
+}
+
+.my25 {
+  margin: auto 25px;
+}
+
+.my30 {
+  margin: auto 30px;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt15 {
+  margin-top: 15px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.ml0 {
+  margin-left: 0;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.ml25 {
+  margin-left: 25px;
+}
+
+.ml30 {
+  margin-left: 30px;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mr15 {
+  margin-right: 15px;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mr25 {
+  margin-right: 25px;
+}
+
+.mr30 {
+  margin-right: 30px;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mb5 {
+  margin-bottom: 5px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb25 {
+  margin-bottom: 25px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.p5 {
+  padding: 5px;
+}
+
+.p10 {
+  padding: 10px;
+}
+
+.p15 {
+  padding: 15px;
+}
+
+.p20 {
+  padding: 20px;
+}
+
+.p25 {
+  padding: 25px;
+}
+
+.p30 {
+  padding: 30px;
+}
+
+.px5 {
+  padding: 5px 0;
+}
+
+.px10 {
+  padding: 10px 0;
+}
+
+.px15 {
+  padding: 15px 0;
+}
+
+.px20 {
+  padding: 20px 0;
+}
+
+.px25 {
+  padding: 25px 0;
+}
+
+.px30 {
+  padding: 30px 0;
+}
+
+.py5 {
+  padding: 0 5px;
+}
+
+.py10 {
+  padding: 0 10px;
+}
+
+.py15 {
+  padding: 0 15px;
+}
+
+.py20 {
+  padding: 0 20px;
+}
+
+.py25 {
+  padding: 0 25px;
+}
+
+.py30 {
+  padding: 0 30px;
+}
+
+.pt0 {
+  padding-top: 0px;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+
+.pt15 {
+  padding-top: 15px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pt25 {
+  padding-top: 25px;
+}
+
+.pt30 {
+  padding-top: 30px;
+}
+
+.pl0 {
+  padding-left: 0px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pl25 {
+  padding-left: 25px;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.pr0 {
+  padding-right: 0px;
+}
+
+.pr5 {
+  padding-right: 5px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pr25 {
+  padding-right: 25px;
+}
+
+.pr30 {
+  padding-right: 30px;
+}
+
+.pb0 {
+  padding-bottom: 0px;
+}
+
+.pb5 {
+  padding-bottom: 5px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pb15 {
+  padding-bottom: 15px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pb25 {
+  padding-bottom: 25px;
+}
+
+.pb30 {
+  padding-bottom: 30px;
+}
+
+.colWf {
+  color: #ffffff;
+}
+
+.colWc {
+  color: #cccccc;
+}
+
+.colB0 {
+  color: #000000;
+}
+
+.colB2 {
+  color: #222222;
+}
+

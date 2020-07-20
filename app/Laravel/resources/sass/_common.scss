@@ -1,0 +1,177 @@
+// font-size
+.fs{
+  &r{
+    &0{ font-size: 1.0rem; }
+    &1{ font-size: 1.1rem; }
+    &S{ font-size: 1.2rem; }
+    &3{ font-size: 1.3rem; }
+    &4{ font-size: 1.4rem; }
+    &M{ font-size: 1.5rem; }
+    &6{ font-size: 1.6rem; }
+    &7{ font-size: 1.7rem; }
+    &L{ font-size: 1.8rem; }
+    &XL{ font-size: 2rem; }
+  }
+  &p{
+    &0{ font-size: 10px; }
+    &1{ font-size: 11px; }
+    &S{ font-size: 12px; }
+    &3{ font-size: 13px; }
+    &4{ font-size: 14px; }
+    &M{ font-size: 15px; }
+    &6{ font-size: 16px; }
+    &7{ font-size: 17px; }
+    &L{ font-size: 18px; }
+    &XL{ font-size: 2px; }
+  }
+}
+//margin
+.m{
+  &Auto{ margin: auto; }
+  &0{ margin: 0; }
+  &5{ margin: 5px; }
+  &10{ margin: 10px; }
+  &15{ margin: 15px; }
+  &20{ margin: 20px; }
+  &25{ margin: 25px; }
+  &30{ margin: 30px; }
+  &x{
+    &5{ margin: 5px auto; }
+    &10{ margin: 10px auto; }
+    &15{ margin: 15px auto; }
+    &20{ margin: 20px auto; }
+    &25{ margin: 25px auto; }
+    &30{ margin: 30px auto; }
+  }
+  &y{
+    &5{ margin: auto 5px; }
+    &10{ margin: auto 10px; }
+    &15{ margin: auto 15px; }
+    &20{ margin: auto 20px; }
+    &25{ margin: auto 25px; }
+    &30{ margin: auto 30px; }
+  }
+  &t{
+    &0{ margin-top: 0; }
+    &5{ margin-top: 5px; }
+    &10{ margin-top: 10px; }
+    &15{ margin-top: 15px; }
+    &20{ margin-top: 20px; }
+    &25{ margin-top: 25px; }
+    &30{ margin-top: 30px; }
+  }
+  &l{
+    &0{ margin-left: 0; }
+    &5{ margin-left: 5px; }
+    &10{ margin-left: 10px; }
+    &15{ margin-left: 15px; }
+    &20{ margin-left: 20px; }
+    &25{ margin-left: 25px; }
+    &30{ margin-left: 30px; }
+  }
+  &r{
+    &0{ margin-right: 0; }
+    &5{ margin-right: 5px; }
+    &10{ margin-right: 10px; }
+    &15{ margin-right: 15px; }
+    &20{ margin-right: 20px; }
+    &25{ margin-right: 25px; }
+    &30{ margin-right: 30px; }
+  }
+  &b{
+    &0{ margin-bottom: 0; }
+    &5{ margin-bottom: 5px; }
+    &10{ margin-bottom: 10px; }
+    &15{ margin-bottom: 15px; }
+    &20{ margin-bottom: 20px; }
+    &25{ margin-bottom: 25px; }
+    &30{ margin-bottom: 30px; }
+  }
+}
+// padding
+.p{
+  &0{ padding: 0; }
+  &5{ padding: 5px; }
+  &10{ padding: 10px; }
+  &15{ padding: 15px; }
+  &20{ padding: 20px; }
+  &25{ padding: 25px; }
+  &30{ padding: 30px; }
+  &x{
+    &5{ padding: 5px 0; }
+    &10{ padding: 10px 0; }
+    &15{ padding: 15px 0; }
+    &20{ padding: 20px 0; }
+    &25{ padding: 25px 0; }
+    &30{ padding: 30px 0; }
+  }
+  &y{
+    &5{ padding: 0 5px; }
+    &10{ padding: 0 10px; }
+    &15{ padding: 0 15px; }
+    &20{ padding: 0 20px; }
+    &25{ padding: 0 25px; }
+    &30{ padding: 0 30px; }
+  }
+  &t{
+    &0{ padding-top: 0px; }
+    &5{ padding-top: 5px; }
+    &10{ padding-top: 10px; }
+    &15{ padding-top: 15px; }
+    &20{ padding-top: 20px; }
+    &25{ padding-top: 25px; }
+    &30{ padding-top: 30px; }
+  }
+  &l{
+    &0{ padding-left: 0px; }
+    &5{ padding-left: 5px; }
+    &10{ padding-left: 10px; }
+    &15{ padding-left: 15px; }
+    &20{ padding-left: 20px; }
+    &25{ padding-left: 25px; }
+    &30{ padding-left: 30px; }
+  }
+  &r{
+    &0{ padding-right: 0px; }
+    &5{ padding-right: 5px; }
+    &10{ padding-right: 10px; }
+    &15{ padding-right: 15px; }
+    &20{ padding-right: 20px; }
+    &25{ padding-right: 25px; }
+    &30{ padding-right: 30px; }
+  }
+  &b{
+    &0{ padding-bottom: 0px; }
+    &5{ padding-bottom: 5px; }
+    &10{ padding-bottom: 10px; }
+    &15{ padding-bottom: 15px; }
+    &20{ padding-bottom: 20px; }
+    &25{ padding-bottom: 25px; }
+    &30{ padding-bottom: 30px; }
+  }
+}
+// 文字色
+.col{
+  &W{
+    &f{ color: #fff; }
+    &c{ color: #ccc; }
+  }
+  &B{
+    &0{ color: #000; }
+    &2{ color: #222; }
+  }
+  &R{
+    &f{ color: #f00; }
+    &0{ color: #f40; }
+  }
+  &B{
+    &f{ color: #00f; }
+    &0{ color: #04f; }
+  }
+}
+.ts{
+  &B{
+    text-shadow: 0 0 0 #000, 1px 0 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 0 1px 0 #000,
+                -1px 0px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 0 -1px 0 #000;
+  }
+}
