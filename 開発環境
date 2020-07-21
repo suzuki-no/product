@@ -1,3 +1,6 @@
+git config --global user.email suzukino.suzuki.yuichi@gmail.com
+git config --global user.name suzuki.yuichi
+
 ■開発環境
 VirtualBox + Vagrant + Homestead + Composer
 基本↓を参照　
@@ -11,6 +14,8 @@ https://qiita.com/Bmouthf/items/2a209fb731a81d92a4b4
 メール: suzukino.suzuki.yuichi@gmail.com
 パス: suzuki!15no
 
+git config --global user.email suzukino.suzuki.yuichi@gmail.com
+git config --global user.name suzuki!15no
 
 ■webpackでjs,scssをコンパイルする場合の対応
 上記のサイトどおりではコンパイルは通らないので以下を確認する。
@@ -59,5 +64,7 @@ php artisan make:model Todo -m -c -r
 php artisan migrate:fresh
 新規作成する場合はこっち
 php artisan migrate
-追加作成する場合はこっち
+再実行してテーブルを再構築。登録でーたはすべて消えるので注意。使用してはいけません。
 php artisan migrate:refresh
+⑧テーブルが作成されているか確認する。
+mysql -ularavel -pLa@ra5el

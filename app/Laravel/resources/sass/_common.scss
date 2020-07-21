@@ -1,3 +1,11 @@
+// display
+.d{
+  &n{ display: none; }
+  &b{ display: block; }
+  &ib{ display: inline-block; }
+  &f{ display: flex; }
+  &t{ display: table; }
+}
 // font-size
 .fs{
   &r{
@@ -97,6 +105,18 @@
   &20{ padding: 20px; }
   &25{ padding: 25px; }
   &30{ padding: 30px; }
+  &vw5{ padding: 0 5vw; }
+  &vw10{ padding: 0 10vw; }
+  &vw15{ padding: 0 15vw; }
+  &vw20{ padding: 0 20vw; }
+  &vw25{ padding: 0 25vw; }
+  &vw30{ padding: 0 30vw; }
+  &vh5{ padding: 5vh 0; }
+  &vh10{ padding: 10vh 0; }
+  &vh15{ padding: 15vh 0; }
+  &vh20{ padding: 20vh 0; }
+  &vh25{ padding: 25vh 0; }
+  &vh30{ padding: 30vh 0; }
   &x{
     &5{ padding: 5px 0; }
     &10{ padding: 10px 0; }

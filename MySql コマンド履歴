@@ -1,0 +1,17 @@
+CREATE DATABASE laravel
+
+create user 'laravel' identified by 'La@ra5el';
+
+DROP DATABASE laravel
+
+mysql -ularavel -pLa@ra5el
+
+show databases;
+use laravel;
+show tables;
+show columns from admins;
+
+INSERT admins (admin_id, name, password, status, created_at, created_by) VALUES('adm90001', 'laravel', PASSWORD('laravel'), 'active', cast('2020-07-20' as date), cast('2020-07-20' as date));
+
+SELECT PASSWORD('laravel');
+SELECT * FROM admins;

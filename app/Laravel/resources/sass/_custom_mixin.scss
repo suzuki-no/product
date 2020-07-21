@@ -1,0 +1,25 @@
+//position
+@mixin position($pos: relative, $dis: block, $wid: auto, $hei: auto, $top: non, $lef: non, $rig: non, $bot: non) {
+  position: $pos;
+  display: $dis;
+  width: $wid;
+  height: $hei;
+  @if ($top != non) {top: $top;}
+  @if ($lef != non) {left: $lef;}
+  @if ($rig != non) {right: $rig;}
+  @if ($bot != non) {bottom: $bot;}
+}
+//y軸(タテ)
+@mixin sticky-y($top: 0, $zin: 100){
+  position: -webkit-sticky;
+  position: sticky;
+  top: $top;
+  z-index: $zin;
+}
+//x軸(ヨコ)
+@mixin sticky-x($lef: 0, $zin: 100){
+  position: -webkit-sticky;
+  position: sticky;
+  left: $top;
+  z-index: $zin;
+}
