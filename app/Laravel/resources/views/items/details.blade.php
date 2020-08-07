@@ -6,16 +6,18 @@
 <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
 @endsection
 @section('pageJs')
-<script src="{{ asset('js/item.js')}}"></script>
+<script src="{{-- asset('js/item.js')--}}"></script>
 @endsection
 @section('content')
 <div id="item-app">
     <div class="item_container">
-      <div>{{ $item->item_name }}</div>
-      <div>{{ $item->item_description }}</div>
-      <div>{{ asset($item->item_image) }}</div>
-      <div class="_thumbnail">
-        <img src="{{ asset($item->item_image) }}" data-id="{{ $item->item_id }}" />
+      <div class="item_table">
+        <div class="_row _name _sepa">{{ $item->item_name }}</div>
+        <div class="_row _desc _sepa">{{ $item->item_description }}</div>
+        <div class="_thumbnail">
+          <img src="{{ asset($item->item_image) }}" data-id="{{ $item->item_id }}" class="db"/>
+        </div>
+        <div class="_row _price _sepa">{{ $sell_price_intax }}</div>
       </div>
     </div>
 </div>

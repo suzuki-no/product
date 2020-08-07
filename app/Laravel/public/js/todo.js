@@ -19472,7 +19472,7 @@ var todoApp = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\suzuki_yuichi\git\product\app\Laravel\resources\js\todo.js */"./resources/js/todo.js");
+module.exports = __webpack_require__(/*! /home/vagrant/code/Laravel/resources/js/todo.js */"./resources/js/todo.js");
 
 
 /***/ })

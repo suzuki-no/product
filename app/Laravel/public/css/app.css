@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .dn {
   display: none;
 }
@@ -645,6 +647,45 @@ body {
 
 #item-app .item_table {
   margin: 25px;
+}
+
+#item-app .item_table ._row {
+  border: solid 1px #454545;
+  line-height: 3rem;
+  margin: 2px auto;
+}
+
+#item-app .item_table ._row._sepa::before {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  height: auto;
+  text-align: center;
+  margin-right: 10px;
+  border-right: solid 1px #454545;
+}
+
+#item-app .item_table ._row ._conte {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+#item-app .item_table ._name::before {
+  content: "\5546\54C1\540D";
+}
+
+#item-app .item_table ._desc::before {
+  content: "\5546\54C1\8AAC\660E";
+}
+
+#item-app .item_table ._price::before {
+  content: "\4FA1\683C(\7A0E\8FBC\307F)";
+}
+
+#item-app .item_table ._price::after {
+  content: "\5186";
 }
 
 #item-app .item_list {

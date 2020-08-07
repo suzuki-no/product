@@ -19496,7 +19496,7 @@ Vue.nextTick(function (render) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\suzuki_yuichi\git\product\app\Laravel\resources\js\task.js */"./resources/js/task.js");
+module.exports = __webpack_require__(/*! /home/vagrant/code/Laravel/resources/js/task.js */"./resources/js/task.js");
 
 
 /***/ })

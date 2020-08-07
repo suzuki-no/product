@@ -4,6 +4,40 @@
 #item-app{
   .item_table{
       margin: 25px;
+    ._row{
+        border: solid 1px #454545;
+        line-height: 3rem;
+        margin: 2px auto;
+      &._sepa{
+        &::before{
+          @include position($dis: inline-block, $wid: 25%);
+          text-align: center;
+          margin-right: 10px;
+          border-right: solid 1px #454545;
+        }
+      }
+      ._conte{
+        @include position($dis: inline-block);
+      }
+    }
+    ._name{
+      &::before{
+          content: '商品名';
+      }
+    }
+    ._desc{
+      &::before{
+          content: '商品説明';
+      }
+    }
+    ._price{
+      &::before{
+          content: '価格(税込み)';
+      }
+      &::after{
+          content: '円';
+      }
+    }
   }
   .item_list{
       @include position;
@@ -40,7 +74,6 @@
         display: block;
     }
   }
-
   @keyframes _thumbnail_over {
       0% {
           bottom: -40px;

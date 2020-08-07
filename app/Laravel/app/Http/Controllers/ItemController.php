@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Item;
+use App\Consts\ItemConst;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -94,8 +95,10 @@ class ItemController extends Controller
 
         $results =array();
         $results['item'] = Item::where('item_id', request('item_id'))->first();
+        $extax = $results['item']['sell_price'];
         return view('items/details',[
           'item' => $results['item'],
+          'sell_price_intax' => ( $extax / ItemConst::TAX ) + $extax,
         ]);
 
       //return view('items/details',['item_id' => request('item_id')]);

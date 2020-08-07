@@ -19492,8 +19492,8 @@ var itemApp = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\suzuki_yuichi\git\product\app\Laravel\resources\js\item.js */"./resources/js/item.js");
-module.exports = __webpack_require__(/*! C:\Users\suzuki_yuichi\git\product\app\Laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vagrant/code/Laravel/resources/js/item.js */"./resources/js/item.js");
+module.exports = __webpack_require__(/*! /home/vagrant/code/Laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
