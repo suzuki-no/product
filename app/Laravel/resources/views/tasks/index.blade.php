@@ -1,8 +1,25 @@
 @extends('layout')
-@section('title', 'Tasks 管理')
-@section('pageJs')<script src="{{ asset('js/task.js')}}"></script>@endsection
+@section('title', 'Task 管理')
+@section('pageCss')
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+@endsection
+@section('pageJs')
+<script src="{{ asset('js/task.js')}}"></script>
+@endsection
 @section('content')
 <div id="task-app">
+    <div class="col_redo fsL b my5">1:<span>@{{operation_log}}</span></div>
+    <div class="col_redo fsL b my5">2:<span v-text="operation_log"></span></div>
+    <div class="col_redo fsL b my5">3:<span v-html="operation_log"></span></div>
+    <task-heading class="col_redo fsL b my5"></task-heading>
+    <div v-show="set_task_status">
+
+      <div v-if="set_task">登録完了！</div>
+      <div v-else>登録削除！</div>
+
+    </div>
     <h1>Task List</h1>
         {{ csrf_field() }}
         <!-- Task Name -->

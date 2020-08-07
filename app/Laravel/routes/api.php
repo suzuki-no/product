@@ -31,4 +31,8 @@ Route::group(['middleware' => 'api'], function(){
     Route::get('task-get', 'TaskController@getTasks');
     Route::post('task-add', 'TaskController@addTask');
     Route::post('task-del', 'TaskController@deleteTask');
+    /**
+    * item project
+    */
+    Route::get('item-get', 'ItemController@getItems');
 });

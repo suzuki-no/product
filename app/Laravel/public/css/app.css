@@ -98,6 +98,10 @@
   font-size: 2px;
 }
 
+.fwb {
+  font-weight: bold;
+}
+
 .mAuto {
   margin: auto;
 }
@@ -526,36 +530,48 @@
   padding-bottom: 30px;
 }
 
-.colWf {
+.col_white {
   color: #fff;
 }
 
-.colWc {
+.col_whitec {
   color: #ccc;
 }
 
-.colB0 {
+.col_black {
   color: #000;
 }
 
-.colB2 {
+.col_black2 {
   color: #222;
 }
 
-.colRf {
+.col_red {
   color: #f00;
 }
 
-.colR0 {
-  color: #f40;
+.col_redo {
+  color: #ff5e00;
 }
 
-.colBf {
+.col_blue {
   color: #00f;
 }
 
-.colB0 {
+.col_blue0 {
   color: #04f;
+}
+
+.col_yellow {
+  color: #ff0;
+}
+
+.col_orange {
+  color: #ffa500;
+}
+
+.col_oranger {
+  color: #ff5e00;
 }
 
 .tsB {
@@ -621,5 +637,90 @@ body {
 
 .m-b-md {
   margin-bottom: 30px;
+}
+
+/**
+* views item
+*/
+
+#item-app .item_table {
+  margin: 25px;
+}
+
+#item-app .item_list {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+#item-app .item_tray {
+  position: relative;
+  display: inline-block;
+  width: 28%;
+  height: auto;
+  min-width: 150px;
+  margin: 10px;
+}
+
+#item-app .item_tray ._thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+#item-app .item_tray ._thumbnail:hover {
+  transform: rotate3d(0, 0, 0, 0);
+  -webkit-filter: brightness(100%)invert(1);
+          filter: brightness(100%)invert(1);
+  justify-content: center;
+}
+
+#item-app .item_tray ._thumbnail:hover::after {
+  -webkit-animation: _thumbnail_over 0.3s ease 0s 1 normal forwards;
+          animation: _thumbnail_over 0.3s ease 0s 1 normal forwards;
+}
+
+#item-app .item_tray ._thumbnail::after {
+  content: attr(itshde);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  left: 0;
+  bottom: -40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  font-size: 90%;
+  font-weight: bold;
+  line-height: 95%;
+  letter-spacing: -0.08em;
+}
+
+#item-app .item_tray img[data-v-thum] {
+  display: block;
+}
+
+@-webkit-keyframes _thumbnail_over {
+  0% {
+    bottom: -40px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes _thumbnail_over {
+  0% {
+    bottom: -40px;
+  }
+
+  100% {
+    bottom: 0;
+  }
 }
 

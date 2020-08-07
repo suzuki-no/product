@@ -15,3 +15,23 @@ INSERT admins (admin_id, name, password, status, created_at, created_by) VALUES(
 
 SELECT PASSWORD('laravel');
 SELECT * FROM admins;
+DROP TABLE admins;
+
+CREATE TABLE admins (
+PRIMARY KEY(id) bigint(20) unsigned auto_increment,
+name varchar(255) NOT NULL,
+email varchar(255) UNIQUE,
+email_verified_at timestamp,
+password varchar(255) NOT NULL,
+remember_token varchar(100),
+created_at timestamp,
+updated_at timestamp);
+
+
+alter table items drop id;
+ALTER TABLE items add item_id int unsigned NOT NULL PRIMARY KEY COMMENT '商品ID';
+drop table items;
+
+mysql -ularavel -pLa@ra5el laravel< create_items.sql
+ALTER TABLE items add created_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+ALTER TABLE items add updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;

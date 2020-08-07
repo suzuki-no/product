@@ -68,3 +68,24 @@ php artisan migrate
 php artisan migrate:refresh
 ⑧テーブルが作成されているか確認する。
 mysql -ularavel -pLa@ra5el
+⑨仮想サーバを更新する
+vagrant reload
+※プロジェクトを増やした場合は↓にしないとyaml設定が更新されない。
+vagrant reload --provision
+
+■認証処理 ※Laravel6以降はmake:authは使えません。
+仮想サーバーに入って、認証処理を追加するプロジェクトに移動する。
+vagrant shh
+cd code/Admin
+composer require laravel/ui
+php artisan ui vue --auth
+インストールが完了したらホストに戻って同プロジェクトに移動して
+npm install ※すでに入れてある場合は不要
+npm run dev
+
+php artisan make:migration create_items_table
+php artisan make:model Item -m -c -r
+php artisan migrate
+mysql -ularavel -pLa@ra5el < doc/master/item_1.sql
+
+DROP TABLE items;

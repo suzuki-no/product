@@ -33,6 +33,10 @@
     &XL{ font-size: 2px; }
   }
 }
+// font-weight
+.fw{
+  &b{ font-weight: bold; }
+}
 //margin
 .m{
   &Auto{ margin: auto; }
@@ -171,22 +175,23 @@
   }
 }
 // 文字色
-.col{
-  &W{
-    &f{ color: #fff; }
+.col_{
+  &white{ color: #fff;
     &c{ color: #ccc; }
   }
-  &B{
-    &0{ color: #000; }
+  &black{ color: #000;
     &2{ color: #222; }
   }
-  &R{
-    &f{ color: #f00; }
-    &0{ color: #f40; }
+  &red{ color: #f00;
+    &o{ color: #ff5e00; }
   }
-  &B{
-    &f{ color: #00f; }
+  &blue{ color: #00f;
     &0{ color: #04f; }
+  }
+  &yellow{ color: #ff0;
+  }
+  &orange{ color: #ffa500;
+    &r{ color: #ff5e00; }
   }
 }
 .ts{

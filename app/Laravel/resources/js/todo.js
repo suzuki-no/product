@@ -12,13 +12,21 @@ const todoApp = new Vue({
             });
         },
         addTodo: function(){
-          console.log("model",this.new_todo);
+          axios.post('/api/todo-add',{
+            title: this.new_todo
+          }).then(function(res){
+            console.log("res",res);
+            this.todos = res.data;
+            this.new_todo = '';
+          });
+          /*
           axios.post('/api/todo-add',{
             title: this.new_todo
           }).then((res)=>{
             this.todos = res.data;
             this.new_todo = '';
           });
+          */
         },
         deleteTodo: function(task_id){
           console.log("data",task_id);

@@ -4,7 +4,10 @@ const taskApp = new Vue({
     data: {
         tasks: [],
         todos: [],
-        new_task: ''
+        new_task: '',
+        operation_log: '',
+        set_task_status: false,
+        set_task: false,
     },
     methods: {
         fetchTasks: function(){
@@ -21,6 +24,9 @@ const taskApp = new Vue({
           }).then((res)=>{
             this.tasks = res.data;
             this.new_task = '';
+            this.operation_log ='タスクを登録しました';
+            this.set_task_status = true;
+            this.set_tase = true;
           });
         },
         deleteTask: function(task_id){
@@ -29,6 +35,9 @@ const taskApp = new Vue({
             id: task_id
           }).then((res)=>{
             this.tasks = res.data;
+            this.operation_log ='タスクを削除しました。';
+            this.set_task_status = true;
+            this.set_tase = false;
           });
         },
     },
@@ -36,3 +45,18 @@ const taskApp = new Vue({
         this.fetchTasks();
     }
 });
+Vue.component('task-heading', {
+  render: function (createElement) {
+    template: '<strong>Hello</strong>';
+    throw new Error('err213')
+  },
+  renderError : function(ce, err) {
+    return ce('pre', { style: { color: 'red' }}, err.stack)
+  },
+  props: [ 'level' ]
+});
+Vue.nextTick(
+  (render)=>{
+    template: '<strong>Bye!</strong>';
+  },
+)

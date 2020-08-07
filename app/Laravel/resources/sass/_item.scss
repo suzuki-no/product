@@ -1,0 +1,52 @@
+/**
+* views item
+*/
+#item-app{
+  .item_table{
+      margin: 25px;
+  }
+  .item_list{
+      @include position;
+      margin: auto;
+      text-align: center;
+  }
+  .item_tray{
+      @include position($dis: inline-block, $wid: 28%);
+      min-width: 150px;
+      margin: 10px;
+    ._thumbnail{
+        position: relative;
+        overflow: hidden;
+      &:hover{
+          @include filter($inve: 1);
+        &::after{
+          animation: _thumbnail_over .3s ease 0s 1 normal forwards;
+        }
+      }
+      &::after{
+          content: attr(itshde);
+          @include position($pos: absolute, $dis: flex, $wid: 100%, $hei: 40px, $bot: -40px, $lef: 0);
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          color: #000;
+          font-size: 90%;
+          font-weight: bold;
+          line-height: 95%;
+          letter-spacing: -.08em;
+      }
+    }
+    img[data-v-thum]{
+        display: block;
+    }
+  }
+
+  @keyframes _thumbnail_over {
+      0% {
+          bottom: -40px;
+      }
+      100% {
+          bottom: 0;
+      }
+  }
+}
