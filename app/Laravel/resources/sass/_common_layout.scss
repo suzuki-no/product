@@ -1,7 +1,7 @@
 //全体のlayout
 html, body {
-    background-color: #fff;
-    color: #636b6f;
+    background-color: $base_color_white;
+    color: $base_font_color;
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
@@ -42,7 +42,7 @@ html, body {
 }
 
 .links > a {
-    color: #636b6f;
+    color: $base_font_color;
     padding: 0 25px;
     font-size: 13px;
     font-weight: 600;
@@ -53,4 +53,163 @@ html, body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+/* 共通ナビ */
+.nav_button_container{
+  .nav_button_bg{
+      @include position($pos: fixed, $wid: 100%, $hei: 96px, $lef: 0);
+      margin: auto;
+      background-color: rgba(0,0,0,.5);
+      z-index: 10;
+  }
+  .nav_button_fl{
+      /*@include position($pos: fixed, $wid: 100%, $hei: 96px, $lef: 0);
+      margin: auto;*/
+  }
+  .nav_button {
+    @include position($pos: fixed, $wid: 62px, $hei: 54px, $top: 5px, $lef: 10px);
+    margin: auto;
+    /*background: transparent;*/
+    border: none;
+    z-index: 15;
+    .__nav_br {
+      @include position($pos: absolute, $wid: 90%, $hei: 6px, $lef: 0, $rig: 0);
+      margin: auto;
+      border-radius: 2px;
+      background: $base_color_white;
+      transition: all .5s;
+      &:nth-child(1) {
+        top: 10px;
+      }
+      &:nth-child(2) {
+        top: 45%;
+      }
+      &:nth-child(3) {
+        bottom: 10px;
+      }
+    }
+    &.is_active {
+      .__nav_br {
+        &:nth-child(1) {
+          transform: translateY(14px) rotate(-46deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-14px) rotate(46deg);
+        }
+      }
+    }
+  }
+}
+#nav-weapper{
+    @include position($pos: fixed, $wid: 100%, $top: 0, $lef: 0);
+    padding: 75px 25px 20px;
+    background-color: $base_color_white_2;
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s;
+  &.nav_open {
+      opacity: 1;
+      z-index: 10;
+  }
+}
+/* アンカーナビ */
+.anchor_navi{
+  ._tag{
+      position: relative;
+      text-decoration: underline;
+      text-decoration-color: $base_navi_color;
+      margin-right: 20px;
+    &::after{
+        content: '';
+        @include position($pos: absolute,  $wid: 5px, $hei: 5px, $top: 0, $rig: -20px, $bot: 0);
+        margin: auto;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent $base_navi_color;
+    }
+  }
+  ._current{
+      text-decoration: none;
+    &::before{
+        content: '';
+        @include position($pos: absolute, $wid: 5px, $hei: 5px, $top: unset, $lef: 0, $rig: 0, $bot: -4px);
+        margin: auto;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent $base_navi_color transparent;
+    }
+    &::after{
+        content: '';
+        @include position($pos: absolute,  $wid: 5px, $hei: 5px, $top: unset, $lef: 0, $rig: 0, $bot: -2px);
+        margin: auto;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent $base_color_white transparent;
+    }
+  }
+}
+/* タブ */
+.tab_category{
+    position: relative;
+    display: flex;
+    border-bottom: solid $base_border_color 2px;
+  a{
+    @include position($wid: 25%);
+    font-weight: bold;
+    text-align: center;
+    margin: 0 1px -2px;
+    padding: 1%;
+    background-color: $base_color_black_2;
+    border: solid $base_border_color 2px;
+    border-radius: 5px 5px 0 0;
+    &.select{
+      background-color: $base_color_white;
+      border-bottom: transparent;
+    }
+  }
+}
+/* モーダルウィンドウ */
+
+.modal_window{
+  &._outer{
+    @include position($pos: fixed, $dis: flex, $wid: 100%, $hei: 100%, $top: 0, $lef: 0);
+    background-color: rgba(0, 0, 0, .6);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  &._inner{
+    @include position($dis: flex, $wid: 80%, $hei: 50%, $top: 0, $lef: 0, $rig: 0, $bot: 0);
+    margin: auto;
+    padding: 20px;
+    background-color: $base_color_white;
+    justify-content: center;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 101;
+  }
+  &-enter-active {
+    transition: opacity 0.4s;
+    // オーバーレイに包含されているモーダルウィンドウのトランジション
+    ._inner{
+      transition: opacity 0.4s, transform 0.5s;
+    }
+  }
+  // ディレイを付けるとモーダルウィンドウが消えた後にオーバーレイが消える
+  &-leave-active {
+    transition: opacity 0.4s ease 0.2s;
+    ._inner{
+      transition: opacity 0.4s, transform 0.5s;
+    }
+  }
+  &-enter, &-leave-to {
+    opacity: 0;
+    ._inner{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
 }

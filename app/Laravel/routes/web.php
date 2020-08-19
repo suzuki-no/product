@@ -25,9 +25,11 @@ Auth::routes();
 /*認証あり*/
 // Route::get('/tasks', 'TaskController@index')->name('task')->middleware('auth');
 // Route::get('/todos', 'TodoController@index')->name('todo')->middleware('auth');
-
+Route::get('/modal', 'ModalController@index')->name('modal');
 Route::get('/items', 'ItemController@index')->name('item');
 Route::get('/items/details', 'ItemController@details');
+Route::get('/tasks', 'TaskController@index')->name('task');
+Route::get('/todos', 'TodoController@index')->name('todo');
 /*
 Route::get('/{any}', function($any){
     return view($any.'/index');

@@ -1,0 +1,10 @@
+@media screen and (min-width: 960px){
+  %foo {
+    border: 1px solid $base_color_black_2;
+    padding: 10px;
+    background: $base_color_white;
+  }
+  .bar {
+    @extend %foo;
+  }
+}

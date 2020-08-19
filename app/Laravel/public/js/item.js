@@ -19416,15 +19416,59 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 __webpack_require__(/*! ./app */ "./resources/js/app.js");
 
-var itemApp = new Vue({
+__webpack_require__(/*! ./navi */ "./resources/js/navi.js");
+
+var Router = new VueRouter({
+  mode: 'history',
+  routes: []
+});
+var ItemAppModel = new Vue(); //import PopupTempl from '../components/Popup.vue';
+
+Vue.component('Popup', {
+  data: function data() {
+    return {
+      showModal: false,
+      item: {
+        item_name: '',
+        item_desc: ''
+      }
+    };
+  },
+  template: "\n    <transition name=\"modal_window\" appear>\n      <div class=\"modal_window _outer\" v-show=\"showModal\" v-on:click.self=\"closeAction\">\n        <div class=\"modal_window _inner\">\n          <div>\n            <p>\u30E2\u30FC\u30C0\u30EB\u30B5\u30F3\u30D7\u30EB\u3067\u3059\u3002</p>\n            <p v-text=\"item.item_name\"></p>\n            <p v-text=\"item.item_description\"></p>\n          </div>\n          <div>\n            <a class=\"close\" href=\"javascript:void(0)\" v-on:click.self=\"closeAction\">\xD7</a>\n          </div>\n        </div>\n      </div>\n    </transition>\n  ",
+  methods: {
+    openAction: function openAction(_obj) {
+      this.showModal = true;
+      this.item = _obj;
+    },
+    closeAction: function closeAction(e) {
+      this.showModal = false;
+    }
+  },
+  mounted: function mounted() {
+    this.$nextTick(function () {
+      ItemAppModel.$on('open-modal', this.openAction);
+    }.bind(this));
+  }
+});
+var ItemApp = new Vue({
   el: '#item-app',
   data: {
     items: [],
     new_item: '',
     operation_log: '',
     set_item_status: false,
-    set_item: false
+    set_item: false,
+    tabSelect: 1,
+    popupItemName: 'testtest',
+    popupItemDesc: 'test',
+    url: '/items/details'
   },
+
+  /*
+  components: {
+    Popup : PopupTempl,
+  },
+  */
   methods: {
     fetchitems: function fetchitems() {
       var _this = this;
@@ -19434,41 +19478,106 @@ var itemApp = new Vue({
         _this.items = res.data["item"];
       });
     },
-    thumbnail: function thumbnail(e) {
-      var _targetId = e.target.getAttribute("data-id");
+    thumbnail: function thumbnail(value) {
+      var _target = this.url + "?ii=" + value;
 
-      console.log("!", _targetId);
-      window.location.href = '/items/details?item_id=' + _targetId; //window.location.href = '/items/details';
+      console.log("!", _target);
+      window.location.href = _target;
+      /*
+      let _targetId = e.target.getAttribute("data-id");
+      window.location.href = '/items/details?item_id='+_targetId;
+      */
+    },
+    showAction: function showAction(value) {
+      ItemAppModel.$emit('open-modal', value);
+    }
+  },
+  created: function created() {
+    this.fetchitems();
+  }
+});
+
+__webpack_require__(/*! ./tab */ "./resources/js/tab.js");
+
+/***/ }),
+
+/***/ "./resources/js/navi.js":
+/*!******************************!*\
+  !*** ./resources/js/navi.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* jsでやる場合
+var _navButton$ =document.querySelector('.nav_button'),
+    _navWrapper$ =document.getElementById('nav-weapper'),
+    _navBtn$ =document.getElementById('nav-button'),
+    _sC$ =document.querySelector('.swiper-container'),
+    _targetClass ="nav_open",
+    _navObj ={
+      navClassToggle: function(){
+          if (_navWrapper$.classList.contains(_targetClass)) {
+            _navObj.navMenuCloseAction();
+          } else {
+            _navObj.navMenuOpenAction();
+          }
+      },
+      navMenuOpenAction: function(){
+          _navWrapper$.classList.add(_targetClass);
+      },
+      navMenuCloseAction: function(){
+          _navWrapper$.classList.remove(_targetClass);
+      },
+    };
+_navButton$.addEventListener('click', function(){
+  _navButton$.classList.toggle('is_active');
+});
+_navBtn$.addEventListener('click', _navObj.navClassToggle);
+*/
+var naviApp = new Vue({
+  el: '#navi-app',
+  data: {
+    naviAnker: [],
+    nabibutton: false
+  },
+  methods: {
+    initialize: function initialize() {
+      this.naviAnker = [{
+        'tag': 'ホーム',
+        'class': 'home',
+        'href': '/items'
+      }, {
+        'tag': '個人情報',
+        'class': 'personal',
+        'href': '/items'
+      }];
     }
     /*
-    additem: function(){
-      console.log("model",this.new_item);
-      axios.post('/api/item-add',{
-        name: this.new_item
-      }).then((res)=>{
-        this.items = res.data;
-        this.new_item = '';
-        this.operation_log ='タスクを登録しました';
-        this.set_item_status = true;
-        this.set_tase = true;
-      });
-    },
-    deleteitem: function(item_id){
-      console.log("data",item_id);
-      axios.post('/api/item-del',{
-        id: item_id
-      }).then((res)=>{
-        this.items = res.data;
-        this.operation_log ='タスクを削除しました。';
-        this.set_item_status = true;
-        this.set_tase = false;
-      });
+    v-on:click="nabiButton" でやる場合はこっち
+    nabiButton: function(){
+      this.nabibutton = !this.nabibutton ? true : false;
     },
     */
 
   },
   created: function created() {
-    this.fetchitems();
+    this.initialize();
+  }
+});
+
+/***/ }),
+
+/***/ "./resources/js/tab.js":
+/*!*****************************!*\
+  !*** ./resources/js/tab.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var tabApp = new Vue({
+  el: '#tab-app',
+  data: {
+    tabSelect: 1
   }
 });
 

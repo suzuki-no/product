@@ -47,7 +47,7 @@
   &20{ margin: 20px; }
   &25{ margin: 25px; }
   &30{ margin: 30px; }
-  &x{
+  &y{
     &5{ margin: 5px auto; }
     &10{ margin: 10px auto; }
     &15{ margin: 15px auto; }
@@ -55,7 +55,7 @@
     &25{ margin: 25px auto; }
     &30{ margin: 30px auto; }
   }
-  &y{
+  &x{
     &5{ margin: auto 5px; }
     &10{ margin: auto 10px; }
     &15{ margin: auto 15px; }
@@ -121,7 +121,7 @@
   &vh20{ padding: 20vh 0; }
   &vh25{ padding: 25vh 0; }
   &vh30{ padding: 30vh 0; }
-  &x{
+  &y{
     &5{ padding: 5px 0; }
     &10{ padding: 10px 0; }
     &15{ padding: 15px 0; }
@@ -129,7 +129,7 @@
     &25{ padding: 25px 0; }
     &30{ padding: 30px 0; }
   }
-  &y{
+  &x{
     &5{ padding: 0 5px; }
     &10{ padding: 0 10px; }
     &15{ padding: 0 15px; }
@@ -176,27 +176,34 @@
 }
 // 文字色
 .col_{
-  &white{ color: #fff;
-    &c{ color: #ccc; }
+  &white{ color: $base_color_white;
+    &c{ color: $base_color_white_2; }
   }
-  &black{ color: #000;
-    &2{ color: #222; }
+  &black{ color: $base_color_black;
+    &2{ color: $base_color_black_2; }
   }
-  &red{ color: #f00;
-    &o{ color: #ff5e00; }
+  &red{ color: $base_color_red;
+    &o{ color: $base_color_red_2; }
   }
-  &blue{ color: #00f;
-    &0{ color: #04f; }
+  &blue{ color: $base_color_blue;
+    &0{ color: $base_color_blue_2; }
   }
-  &yellow{ color: #ff0;
+  &yellow{ color: $base_color_yellow;
   }
-  &orange{ color: #ffa500;
-    &r{ color: #ff5e00; }
+  &orange{ color: $base_color_orange;
+    &r{ color: $base_color_orange_2; }
   }
 }
 .ts{
   &B{
-    text-shadow: 0 0 0 #000, 1px 0 0 #000, 1px -1px 0 #000, 1px 1px 0 #000, 0 1px 0 #000,
-                -1px 0px 0 #000, -1px 1px 0 #000, -1px -1px 0 #000, 0 -1px 0 #000;
+    text-shadow: 0 0 0 $shadow_color_black,
+                1px 0 0 $shadow_color_black,
+                1px -1px 0 $shadow_color_black,
+                1px 1px 0 $shadow_color_black,
+                0 1px 0 $shadow_color_black,
+                -1px 0px 0 $shadow_color_black,
+                -1px 1px 0 $shadow_color_black, 
+                -1px -1px 0 $shadow_color_black,
+                0 -1px 0 $shadow_color_black;
   }
 }

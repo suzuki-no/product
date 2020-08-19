@@ -35,4 +35,11 @@ Route::group(['middleware' => 'api'], function(){
     * item project
     */
     Route::get('item-get', 'ItemController@getItems');
+    /**
+    * modal project
+    */
+    Route::get('item-get', 'ModalController@getItems');
+    Route::get('task-get', 'ModalController@getTasks');
+    Route::get('todo-get', 'ModalController@getTodos');
+
 });

@@ -5,15 +5,16 @@
   .item_table{
       margin: 25px;
     ._row{
-        border: solid 1px #454545;
+        border: solid 1px $base_border_color;
         line-height: 3rem;
-        margin: 2px auto;
+        margin: 2px 0;
+        max-width: 800px;
       &._sepa{
         &::before{
           @include position($dis: inline-block, $wid: 25%);
           text-align: center;
           margin-right: 10px;
-          border-right: solid 1px #454545;
+          border-right: solid 1px $base_border_color;
         }
       }
       ._conte{
@@ -36,6 +37,11 @@
       }
       &::after{
           content: '円';
+      }
+    }
+    ._stock{
+      &::before{
+          content: '在庫';
       }
     }
   }
@@ -62,8 +68,8 @@
           @include position($pos: absolute, $dis: flex, $wid: 100%, $hei: 40px, $bot: -40px, $lef: 0);
           justify-content: center;
           align-items: center;
-          background-color: #fff;
-          color: #000;
+          background-color: $base_color_white;
+          color: $base_color_black;
           font-size: 90%;
           font-weight: bold;
           line-height: 95%;

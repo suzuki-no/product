@@ -88,4 +88,7 @@ php artisan make:model Item -m -c -r
 php artisan migrate
 mysql -ularavel -pLa@ra5el < doc/master/item_1.sql
 
-DROP TABLE items;
+DROP TABLE t_item_stock;
+php artisan make:model ItemStock -m
+php artisan migrate
+php artisan make:model Modal -c
