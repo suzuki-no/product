@@ -38,8 +38,8 @@ Route::group(['middleware' => 'api'], function(){
     /**
     * modal project
     */
-    Route::get('item-get', 'ModalController@getItems');
-    Route::get('task-get', 'ModalController@getTasks');
-    Route::get('todo-get', 'ModalController@getTodos');
+    Route::get('modal-item-get', 'ModalController@getItems');
+    Route::get('modal-task-get', 'ModalController@getTasks');
+    Route::get('modal-todo-get', 'ModalController@getTodos');
 
 });

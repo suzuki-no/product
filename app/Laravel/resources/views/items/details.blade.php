@@ -16,6 +16,18 @@
   </div>
 </div>
 <div id="item-app">
+  <div id="tab-app" class="tab_container" v-pre>
+    {{--
+      <div class="tab_category">
+        <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class="[tabSelect === 1 ? 'select' : '']">タブ１</a>
+        <a href="javascript:void(0)" v-on:click="tabSelect=2" v-bind:class="[tabSelect === 2 ? 'select' : '']">タブ２</a>
+      </div>
+      <div class="tab_content">
+        <div v-show="tabSelect === 1" class="">tab-app1</div>
+        <div v-show="tabSelect === 2" class="">tab-app2</div>
+      </div>
+      --}}
+  </div>
     <div class="item_container">
       <div class="item_table">
         <div class="_row _name _sepa">{{ $item->item_name }}</div>

@@ -24,6 +24,7 @@ _navButton$.addEventListener('click', function(){
 });
 _navBtn$.addEventListener('click', _navObj.navClassToggle);
 */
+import Vue from 'vue';
 const naviApp = new Vue({
     el: '#navi-app',
     data: {
@@ -36,12 +37,27 @@ const naviApp = new Vue({
             {
               'tag': 'ホーム',
               'class': 'home',
+              'href': '/'
+            },
+            {
+              'tag': 'tasks',
+              'class': 'tasks',
+              'href': '/tasks'
+            },
+            {
+              'tag': 'todos',
+              'class': 'todos',
+              'href': '/todos'
+            },
+            {
+              'tag': 'items',
+              'class': 'items',
               'href': '/items'
             },
             {
-              'tag': '個人情報',
-              'class': 'personal',
-              'href': '/items'
+              'tag': 'modal',
+              'class': 'modal',
+              'href': '/modal'
             },
           ];
         },

@@ -1,9 +1,6 @@
 require('./app');
 require('./navi');
-var Router = new VueRouter({
-    mode: 'history',
-    routes: []
-});
+import Vue from 'vue';
 const ItemAppModel = new Vue();
 //import PopupTempl from '../components/Popup.vue';
 Vue.component('Popup',{
@@ -59,7 +56,7 @@ const ItemApp = new Vue({
         tabSelect: 1,
         popupItemName: 'testtest',
         popupItemDesc: 'test',
-        url: '/items/details',
+        url: '/items/details?ii=',
     },
     /*
     components: {

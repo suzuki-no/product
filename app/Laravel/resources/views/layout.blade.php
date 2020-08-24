@@ -39,7 +39,7 @@
           <div id="nav-weapper" v-bind:class="{nav_open:nabibutton}">
             <div class="navi_container" v-for="navi_anker in naviAnker">
               <div :class="navi_anker.class">
-                <a :href="navi_anker.href" v-text="navi_anker.tag"></a>
+                <a :href="navi_anker.href" v-text="navi_anker.tag" class="fsrXL fwb"></a>
               </div>
               {{--
               <div class="home">
@@ -55,8 +55,9 @@
         <div class="container">
           @yield('content')
         </div>
+        {{--
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/vue-router"></script>
+    <script src="https://unpkg.com/vue-router"></script>--}}
     @yield('pageJs')
     </body>
 </html>

@@ -94,6 +94,14 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <div class="mt30">
+                  <div class="links">
+                      <a href="{{ url('/tasks') }}">tasks</a>
+                      <a href="{{ url('/todos') }}">todos</a>
+                      <a href="{{ url('/items') }}">items</a>
+                      <a href="{{ url('/modal') }}">modal</a>
+                  </div>
+                </div>
             </div>
         </div>
     </body>

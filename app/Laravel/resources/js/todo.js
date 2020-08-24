@@ -1,4 +1,6 @@
 require('./app');
+require('./navi');
+import Vue from 'vue';
 const todoApp = new Vue({
     el: '#todo-app',
     data: {

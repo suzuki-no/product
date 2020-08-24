@@ -1,4 +1,6 @@
 require('./app');
+require('./navi');
+import Vue from 'vue';
 const taskApp = new Vue({
     el: '#task-app',
     data: {
@@ -45,6 +47,7 @@ const taskApp = new Vue({
         this.fetchTasks();
     }
 });
+/*
 Vue.component('task-heading', {
   render: function (createElement) {
     template: '<strong>Hello</strong>';
@@ -60,3 +63,4 @@ Vue.nextTick(
     template: '<strong>Bye!</strong>';
   },
 )
+*/

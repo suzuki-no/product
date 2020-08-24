@@ -13,7 +13,7 @@
     <div class="col_redo fsL b my5">1:<span>@{{operation_log}}</span></div>
     <div class="col_redo fsL b my5">2:<span v-text="operation_log"></span></div>
     <div class="col_redo fsL b my5">3:<span v-html="operation_log"></span></div>
-    <item-heading class="col_redo fsL b my5"></item-heading>
+    {{--<item-heading class="col_redo fsL b my5"></item-heading>--}}
     <div id="tab-app" class="tab_container" v-pre>
         <div class="tab_category">
           <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class="[tabSelect === 1 ? 'select' : '']">タブ１</a>
@@ -42,12 +42,10 @@
         <div v-for="item in items" v-bind:key="item.item_id" class="item_tray">
             <div v-text="item.item_name"></div>
             <div class="_thumbnail" :itshde="item.item_short_depiction">
-              <a href="javascript:void(0)" v-on:click="thumbnail(item.item_id)">
+              <a :href="url+item.item_id" v-on:click="thumbnail(item.item_id)">
                 <img :src="item.item_thumbnail" data-v-thum :data-id="item.item_id" />
               </a>
             </div>
-            <button type="button" v-on:click="showModal=!showModal" :data-item-name="item.item_name" :data-item-desc="item.item_description">詳細
-            </button>
             <button type="button" v-on:click="showAction(item)">詳細
             </button>
         </div>
