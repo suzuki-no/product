@@ -103,7 +103,7 @@ html, body {
     }
   }
 }
-#nav-weapper{
+#navi-weapper{
     @include position($pos: fixed, $wid: 100%, $top: 0, $lef: 0);
     padding: 75px 25px 20px;
     background-color: $base_color_white_2;

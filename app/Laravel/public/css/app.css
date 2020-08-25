@@ -20,23 +20,23 @@
   }
 }
 
-.dn {
+.dN {
   display: none;
 }
 
-.db {
+.dB {
   display: block;
 }
 
-.dib {
+.dIb {
   display: inline-block;
 }
 
-.df {
+.dF {
   display: flex;
 }
 
-.dt {
+.dT {
   display: table;
 }
 
@@ -120,8 +120,28 @@
   font-size: 2px;
 }
 
-.fwb {
+.fwB {
   font-weight: bold;
+}
+
+.ttfN {
+  text-transform: none;
+}
+
+.ttfC {
+  text-transform: capitalize;
+}
+
+.ttfU {
+  text-transform: uppercase;
+}
+
+.ttfL {
+  text-transform: lowercase;
+}
+
+.ttfF {
+  text-transform: full-width;
 }
 
 .mAuto {
@@ -729,7 +749,7 @@ body {
   transform: translateY(-14px) rotate(46deg);
 }
 
-#nav-weapper {
+#navi-weapper {
   position: fixed;
   display: block;
   width: 100%;
@@ -743,7 +763,7 @@ body {
   transition: all 0.3s;
 }
 
-#nav-weapper.nav_open {
+#navi-weapper.nav_open {
   opacity: 1;
   z-index: 10;
 }

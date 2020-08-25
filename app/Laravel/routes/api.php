@@ -41,5 +41,8 @@ Route::group(['middleware' => 'api'], function(){
     Route::get('modal-item-get', 'ModalController@getItems');
     Route::get('modal-task-get', 'ModalController@getTasks');
     Route::get('modal-todo-get', 'ModalController@getTodos');
-
+    /**
+    * jquery project
+    */
+    Route::post('jquery-item-get', 'JqueryController@getItems');
 });

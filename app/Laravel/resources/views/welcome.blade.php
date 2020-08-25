@@ -59,6 +59,7 @@
             }
 
             .m-b-md {
+                margin-top: 30px;
                 margin-bottom: 30px;
             }
         </style>
@@ -80,6 +81,14 @@
             @endif
 
             <div class="content">
+                <div class="links">
+                    <a href="{{ url('/tasks') }}">tasks</a>
+                    <a href="{{ url('/todos') }}">todos</a>
+                    <a href="{{ url('/items') }}">items</a>
+                    <a href="{{ url('/modal') }}">modal</a>
+                    <a href="{{ url('/jquerys') }}">jquerys</a>
+                </div>
+
                 <div class="title m-b-md">
                     Laravel
                 </div>
@@ -93,14 +102,6 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-                <div class="mt30">
-                  <div class="links">
-                      <a href="{{ url('/tasks') }}">tasks</a>
-                      <a href="{{ url('/todos') }}">todos</a>
-                      <a href="{{ url('/items') }}">items</a>
-                      <a href="{{ url('/modal') }}">modal</a>
-                  </div>
                 </div>
             </div>
         </div>

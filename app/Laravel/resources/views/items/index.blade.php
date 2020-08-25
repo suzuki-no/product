@@ -31,9 +31,9 @@
           <a href="javascript:void(0)" v-on:click="tabSelect=3" v-bind:class="[tabSelect === 3 ? 'select' : '']">タブ３</a>
         </div>
         <div class="tab_content">
-          <div v-show="tabSelect === 1" class="fwb">コンテンツ１</div>
-          <div v-show="tabSelect === 2" class="fwb">コンテンツ２</div>
-          <div v-show="tabSelect === 3" class="fwb">コンテンツ３</div>
+          <div v-show="tabSelect === 1" class="fwB">コンテンツ１</div>
+          <div v-show="tabSelect === 2" class="fwB">コンテンツ２</div>
+          <div v-show="tabSelect === 3" class="fwB">コンテンツ３</div>
         </div>
     </div>
 

@@ -31732,6 +31732,10 @@ var naviApp = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
         'tag': 'modal',
         'class': 'modal',
         'href': '/modal'
+      }, {
+        'tag': 'jquerys',
+        'class': 'jquerys',
+        'href': '/jquerys'
       }];
     }
     /*

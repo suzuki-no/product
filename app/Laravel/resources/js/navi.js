@@ -59,6 +59,11 @@ const naviApp = new Vue({
               'class': 'modal',
               'href': '/modal'
             },
+            {
+              'tag': 'jquerys',
+              'class': 'jquerys',
+              'href': '/jquerys'
+            },
           ];
         },
         /*

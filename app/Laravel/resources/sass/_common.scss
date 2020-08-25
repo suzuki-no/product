@@ -1,10 +1,10 @@
 // display
 .d{
-  &n{ display: none; }
-  &b{ display: block; }
-  &ib{ display: inline-block; }
-  &f{ display: flex; }
-  &t{ display: table; }
+  &N{ display: none; }
+  &B{ display: block; }
+  &Ib{ display: inline-block; }
+  &F{ display: flex; }
+  &T{ display: table; }
 }
 // font-size
 .fs{
@@ -35,7 +35,14 @@
 }
 // font-weight
 .fw{
-  &b{ font-weight: bold; }
+  &B{ font-weight: bold; }
+}
+.ttf{
+  &N{ text-transform: none; }
+  &C{ text-transform: capitalize; }
+  &U{ text-transform: uppercase; }
+  &L{ text-transform: lowercase; }
+  &F{ text-transform: full-width; }
 }
 //margin
 .m{
@@ -202,7 +209,7 @@
                 1px 1px 0 $shadow_color_black,
                 0 1px 0 $shadow_color_black,
                 -1px 0px 0 $shadow_color_black,
-                -1px 1px 0 $shadow_color_black, 
+                -1px 1px 0 $shadow_color_black,
                 -1px -1px 0 $shadow_color_black,
                 0 -1px 0 $shadow_color_black;
   }

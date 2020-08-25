@@ -36,10 +36,10 @@
               </button>
             </div>
           </div>
-          <div id="nav-weapper" v-bind:class="{nav_open:nabibutton}">
+          <div id="navi-weapper" v-bind:class="{nav_open:nabibutton}">
             <div class="navi_container" v-for="navi_anker in naviAnker">
               <div :class="navi_anker.class">
-                <a :href="navi_anker.href" v-text="navi_anker.tag" class="fsrXL fwb"></a>
+                <a :href="navi_anker.href" v-text="navi_anker.tag" class="fsrXL fwB"></a>
               </div>
               {{--
               <div class="home">
