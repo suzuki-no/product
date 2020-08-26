@@ -17,10 +17,10 @@ class ItemController extends Controller
     public function index()
     {
         //
-        $results =array();
-        $results['items'] = Item::all();
+        $results = array();
+        $results = Item::where('item_kind', 'test')->get();
         return view('items/index',[
-          'items' => $results['items'],
+          'items' => $results,
         ]);
     }
 
@@ -111,8 +111,24 @@ class ItemController extends Controller
     //追加 取得
     public function getItems()
     {
+
+        $swapList = array();
+        $results = array();
+        $itemList = Item::all();
+
+        foreach(ItemConst::ItemKind as $index ){
+          foreach($itemList as $value ){
+            if($value['item_kind'] === $index){
+              $swapList[$index][] = $value;
+            };
+          };
+          $results[$index] = $swapList[$index];
+        };
+        return $results;
+        /*
         $results = array();
         $results["item"] = Item::all();
         return $results;
+        */
     }
 }

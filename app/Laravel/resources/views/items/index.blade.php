@@ -39,35 +39,17 @@
 
     <div class="item_container">
       <div v-show="tabSelect === 1" class="item_list">
-        <div v-for="item in items" v-bind:key="item.item_id" class="item_tray">
-            <div v-text="item.item_name"></div>
-            <div class="_thumbnail" :itshde="item.item_short_depiction">
-              <a :href="url+item.item_id" v-on:click="thumbnail(item.item_id)">
-                <img :src="item.item_thumbnail" data-v-thum :data-id="item.item_id" />
-              </a>
-            </div>
-            <button type="button" v-on:click="showAction(item)">詳細
-            </button>
-        </div>
+        @include('items.itemlist1', ['title' => 'リスト１'])
       </div>
       <div v-show="tabSelect === 2" class="item_list">
-        <div v-for="item in items" v-bind:key="item.item_id" class="item_tray">
-            <div v-text="item.item_name"></div>
-            <div class="_thumbnail" :itshde="item.item_short_depiction">
-              <img :src="item.item_thumbnail" v-on:click.self="thumbnail" data-v-thum :data-id="item.item_id"/>
-            </div>
-        </div>
+        @include('items.itemlist2', ['title' => 'リスト２'])
       </div>
       <div v-show="tabSelect === 3" class="item_list">
-        <div v-for="item in items" v-bind:key="item.item_id" class="item_tray">
-            <div v-text="item.item_name"></div>
-            <div class="_thumbnail" :itshde="item.item_short_depiction">
-              <img :src="item.item_thumbnail" v-on:click.self="thumbnail" data-v-thum :data-id="item.item_id"/>
-            </div>
-        </div>
+        @include('items.itemlist3', ['title' => 'リスト３'])
       </div>
       <div v-text="popupItemName"></div>
       <div v-text="popupItemDesc"></div>
+
       <div class="item_table">
         <table>
             <thead>
@@ -87,37 +69,9 @@
             </tbody>
         </table>
       </div>
+
     </div>
-    {{--
-    <template>
-      <div>
-        <transition name="modal_window">
-          <div class="modal_window _outer" v-if='showModal'>
-            <div class="modal_window _inner">
-              <p>モーダルサンプルです。</p>
-              <a class="close" href="#" v-on:click='click01'>×</a>
-            </div>
-          </div>
-        </transition>
-      </div>
-    </template>
-    --}}
     <Popup id="popup-templ"></Popup>
-    {{--
-      <div id="popup-templ">
-        <transition name="modal_window" appear>
-        <div class="modal_window _outer" v-show="showModal" v-on:click.self="closeModal">
-          <div class="modal_window _inner">
-            <div>
-              <p>モーダルサンプルです。</p>
-              <p id="set-text"></p>
-              <p v-text="popupItemName"></p>
-            </div>
-            <a class="close" href="javascript:void(0)" v-on:click.self="closeModal">×</a>
-          </div>
-        </div>
-      </transition>
-    </div>
-    --}}
+@json($items)
 </div>
 @endsection

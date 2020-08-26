@@ -48,7 +48,9 @@ Vue.component('Popup',{
 const ItemApp = new Vue({
     el: '#item-app',
     data: {
-        items: [],
+        tests: [],
+        samples: [],
+        protos: [],
         new_item: '',
         operation_log: '',
         set_item_status: false,
@@ -67,7 +69,9 @@ const ItemApp = new Vue({
         fetchitems: function(){
             axios.get('/api/item-get').then((res)=>{
                 console.log("model",res.data);
-                this.items = res.data["item"];
+                this.tests = res.data["test"];
+                this.samples = res.data["sample"];
+                this.protos = res.data["proto"];
             });
         },
         thumbnail: function(value){

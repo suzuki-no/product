@@ -31713,7 +31713,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('Popup', {
 var ItemApp = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#item-app',
   data: {
-    items: [],
+    tests: [],
+    samples: [],
+    protos: [],
     new_item: '',
     operation_log: '',
     set_item_status: false,
@@ -31735,7 +31737,9 @@ var ItemApp = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
       axios.get('/api/item-get').then(function (res) {
         console.log("model", res.data);
-        _this.items = res.data["item"];
+        _this.tests = res.data["test"];
+        _this.samples = res.data["sample"];
+        _this.protos = res.data["proto"];
       });
     },
     thumbnail: function thumbnail(value) {
