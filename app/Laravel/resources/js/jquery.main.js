@@ -81,9 +81,7 @@ Main._View = Backbone.View.extend({
         _data ="";
         obj.forEach(function(value, index){
           _data += `<p>
-          <span class="mx5">item_id:`+value.item_id+`</span>
-          <span class="mx5">item_name:`+value.item_name+`</span>
-          <span class="mx5">sell_price:`+value.sell_price+`</span>
+          <span class="mx5">name:`+value.name+`</span>
           </p>`;
         });
     _templ = _templ.append(_title).append(_data);
@@ -102,9 +100,7 @@ Main._View = Backbone.View.extend({
         _data ="";
         obj.forEach(function(value, index){
           _data += `<p>
-          <span class="mx5">item_id:`+value.item_id+`</span>
-          <span class="mx5">item_name:`+value.item_name+`</span>
-          <span class="mx5">sell_price:`+value.sell_price+`</span>
+          <span class="mx5">title:`+value.title+`</span>
           </p>`;
         });
     _templ = _templ.append(_title).append(_data);

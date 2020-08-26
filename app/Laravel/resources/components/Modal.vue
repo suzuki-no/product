@@ -9,7 +9,7 @@
         <div v-show="tabSelect === 1" class="">tab-app1</div>
         <div v-show="tabSelect === 2" class="">tab-app2</div>
       </div>
-      <div v-text="test1"></div>
+      <div v-text="'test' + tabSelect"></div>
       <!--リンクタグを生成します。-->
       <div class="tab_category">
         <router-link to="/">top</router-link>
@@ -32,7 +32,6 @@
 export default {
   data(){
     return {
-      test1: 'test',
       tabSelect: 1
     }
   }

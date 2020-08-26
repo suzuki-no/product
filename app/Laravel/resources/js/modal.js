@@ -30,28 +30,4 @@ new Vue({
   el: '#modalapp',
   router,   /*Vueをインスタンス化する際にrouterを渡す*/
   render: h => h(Modal),
-  data: {
-      items: [],
-      tasks: [],
-      todos: [],
-  },
-  methods: {
-    fetchitems: function(){
-        axios.get('/api/modal-item-get').then((res)=>{
-            console.log("model",res.data);
-            this.items = res.data["item"];
-        });
-    },
-    fetchTasks: function(){
-        axios.get('/api/modal-task-get').then((res)=>{
-            console.log("model",res.data);
-            this.todos = res.data["todo"];
-        });
-    },
-    fetchTodos: function(){
-        axios.get('/api/modal-todo-get').then((res)=>{
-            this.todos = res.data
-        });
-    },
-  }
 })

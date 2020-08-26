@@ -186,7 +186,7 @@ Main._View = Backbone.View.extend({
         _data = "";
 
     obj.forEach(function (value, index) {
-      _data += "<p>\n          <span class=\"mx5\">item_id:" + value.item_id + "</span>\n          <span class=\"mx5\">item_name:" + value.item_name + "</span>\n          <span class=\"mx5\">sell_price:" + value.sell_price + "</span>\n          </p>";
+      _data += "<p>\n          <span class=\"mx5\">name:" + value.name + "</span>\n          </p>";
     });
     _templ = _templ.append(_title).append(_data);
     _result['id'] = _targetId;
@@ -209,7 +209,7 @@ Main._View = Backbone.View.extend({
         _data = "";
 
     obj.forEach(function (value, index) {
-      _data += "<p>\n          <span class=\"mx5\">item_id:" + value.item_id + "</span>\n          <span class=\"mx5\">item_name:" + value.item_name + "</span>\n          <span class=\"mx5\">sell_price:" + value.sell_price + "</span>\n          </p>";
+      _data += "<p>\n          <span class=\"mx5\">title:" + value.title + "</span>\n          </p>";
     });
     _templ = _templ.append(_title).append(_data);
     _result['id'] = _targetId;

@@ -13,6 +13,8 @@
 <script src="{{ asset('js/jquery.main.js') }}"></script>
 @endsection
 @section('content')
+<h4>画面遷移後AJAXでデータを取得してレンダリングする基本的な処理</h4>
+<p>ナビメニューもjQuery用にjsを用意</p>
 <div id="jquery-app">
     <div id="contents">
     </div>

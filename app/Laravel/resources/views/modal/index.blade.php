@@ -9,7 +9,7 @@
 <script src="{{ asset('js/modal.js')}}"></script>
 @endsection
 @section('content')
+<h4>top/about/contact　のタブ切り替え時にそれぞれのcomponentで非同期処理でデータ取得してレンダリングする</h4>
 <div id="modalapp">
-
 </div>
 @endsection

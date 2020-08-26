@@ -9,6 +9,7 @@
 <script src="{{ asset('js/task.js')}}"></script>
 @endsection
 @section('content')
+<h4>画面遷移時に非同期でデータを取得してレンダリングする処理</h4>
 <div id="task-app">
     <div class="col_redo fsL b my5">1:<span>@{{operation_log}}</span></div>
     <div class="col_redo fsL b my5">2:<span v-text="operation_log"></span></div>
