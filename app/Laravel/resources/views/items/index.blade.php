@@ -13,11 +13,12 @@
     <div class="col_redo fsL b my5">1:<span>@{{operation_log}}</span></div>
     <div class="col_redo fsL b my5">2:<span v-text="operation_log"></span></div>
     <div class="col_redo fsL b my5">3:<span v-html="operation_log"></span></div>
+    
     {{--<item-heading class="col_redo fsL b my5"></item-heading>--}}
     <div id="tab-app" class="tab_container" v-pre>
         <div class="tab_category">
-          <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class="[tabSelect === 1 ? 'select' : '']">タブ１</a>
-          <a href="javascript:void(0)" v-on:click="tabSelect=2" v-bind:class="[tabSelect === 2 ? 'select' : '']">タブ２</a>
+          <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class='{select:tabSelect === 1}'>タブ１</a>
+          <a href="javascript:void(0)" v-on:click="tabSelect=2" v-bind:class='{select:tabSelect === 2}'>タブ２</a>
         </div>
         <div class="tab_content">
           <div v-show="tabSelect === 1" class="">tab-app1</div>
@@ -26,9 +27,9 @@
     </div>
     <div class="tab_container">
         <div class="tab_category">
-          <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class="[tabSelect === 1 ? 'select' : '']">タブ１</a>
-          <a href="javascript:void(0)" v-on:click="tabSelect=2" v-bind:class="[tabSelect === 2 ? 'select' : '']">タブ２</a>
-          <a href="javascript:void(0)" v-on:click="tabSelect=3" v-bind:class="[tabSelect === 3 ? 'select' : '']">タブ３</a>
+          <a href="javascript:void(0)" v-on:click="tabSelect=1" v-bind:class='{select:tabSelect === 1}'>タブ１</a>
+          <a href="javascript:void(0)" v-on:click="tabSelect=2" v-bind:class='{select:tabSelect === 2}'>タブ２</a>
+          <a href="javascript:void(0)" v-on:click="tabSelect=3" v-bind:class='{select:tabSelect === 3}'>タブ３</a>
         </div>
         <div class="tab_content">
           <div v-show="tabSelect === 1" class="fwB">コンテンツ１</div>
@@ -72,6 +73,5 @@
 
     </div>
     <Popup id="popup-templ"></Popup>
-@json($items)
 </div>
 @endsection
