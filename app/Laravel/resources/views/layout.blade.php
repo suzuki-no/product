@@ -27,16 +27,16 @@
             @endif
         </div>
         <div id="navi-app">
-          <div class="nav_button_container">
-            <div class="nav_button_fl">
-              <button type="button" id="nav-button" class="nav_button" v-on:click="nabibutton=!nabibutton" v-bind:class='{is_active:nabibutton}'>
-                <span class="__nav_br"></span>
-                <span class="__nav_br"></span>
-                <span class="__nav_br"></span>
+          <div class="navi_button_container">
+            <div class="navi_button_fl">
+              <button type="button" id="nav-button" class="navi_button" v-on:click="nabibutton=!nabibutton" v-bind:class='{is_active:nabibutton}'>
+                <span class="__navi_br"></span>
+                <span class="__navi_br"></span>
+                <span class="__navi_br"></span>
               </button>
             </div>
           </div>
-          <div id="navi-weapper" v-bind:class="{nav_open:nabibutton}">
+          <div id="navi-weapper" v-bind:class="{navi_open:nabibutton}">
             <div class="navi_container" v-for="navi_anker in naviAnker">
               <div :class="navi_anker.class">
                 <a :href="navi_anker.href" v-text="navi_anker.tag" class="fsrXL fwB"></a>

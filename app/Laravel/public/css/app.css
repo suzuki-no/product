@@ -683,7 +683,7 @@ body {
 
 /* 共通ナビ */
 
-.nav_button_container .nav_button_bg {
+.navi_button_container .navi_button_bg {
   position: fixed;
   display: block;
   width: 100%;
@@ -694,12 +694,12 @@ body {
   z-index: 10;
 }
 
-.nav_button_container .nav_button_fl {
+.navi_button_container .navi_button_fl {
   /*@include position($pos: fixed, $wid: 100%, $hei: 96px, $lef: 0);
   margin: auto;*/
 }
 
-.nav_button_container .nav_button {
+.navi_button_container .navi_button {
   position: fixed;
   display: block;
   width: 62px;
@@ -712,7 +712,7 @@ body {
   z-index: 15;
 }
 
-.nav_button_container .nav_button .__nav_br {
+.navi_button_container .navi_button .__navi_br {
   position: absolute;
   display: block;
   width: 90%;
@@ -725,27 +725,27 @@ body {
   transition: all 0.5s;
 }
 
-.nav_button_container .nav_button .__nav_br:nth-child(1) {
+.navi_button_container .navi_button .__navi_br:nth-child(1) {
   top: 10px;
 }
 
-.nav_button_container .nav_button .__nav_br:nth-child(2) {
+.navi_button_container .navi_button .__navi_br:nth-child(2) {
   top: 45%;
 }
 
-.nav_button_container .nav_button .__nav_br:nth-child(3) {
+.navi_button_container .navi_button .__navi_br:nth-child(3) {
   bottom: 10px;
 }
 
-.nav_button_container .nav_button.is_active .__nav_br:nth-child(1) {
+.navi_button_container .navi_button.is_active .__navi_br:nth-child(1) {
   transform: translateY(14px) rotate(-46deg);
 }
 
-.nav_button_container .nav_button.is_active .__nav_br:nth-child(2) {
+.navi_button_container .navi_button.is_active .__navi_br:nth-child(2) {
   opacity: 0;
 }
 
-.nav_button_container .nav_button.is_active .__nav_br:nth-child(3) {
+.navi_button_container .navi_button.is_active .__navi_br:nth-child(3) {
   transform: translateY(-14px) rotate(46deg);
 }
 
@@ -763,7 +763,7 @@ body {
   transition: all 0.3s;
 }
 
-#navi-weapper.nav_open {
+#navi-weapper.navi_open {
   opacity: 1;
   z-index: 10;
 }

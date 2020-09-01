@@ -55,24 +55,24 @@ html, body {
     margin-bottom: 30px;
 }
 /* 共通ナビ */
-.nav_button_container{
-  .nav_button_bg{
+.navi_button_container{
+  .navi_button_bg{
       @include position($pos: fixed, $wid: 100%, $hei: 96px, $lef: 0);
       margin: auto;
       background-color: rgba(0,0,0,.5);
       z-index: 10;
   }
-  .nav_button_fl{
+  .navi_button_fl{
       /*@include position($pos: fixed, $wid: 100%, $hei: 96px, $lef: 0);
       margin: auto;*/
   }
-  .nav_button {
+  .navi_button {
     @include position($pos: fixed, $wid: 62px, $hei: 54px, $top: 5px, $lef: 10px);
     margin: auto;
     /*background: transparent;*/
     border: none;
     z-index: 15;
-    .__nav_br {
+    .__navi_br {
       @include position($pos: absolute, $wid: 90%, $hei: 6px, $lef: 0, $rig: 0);
       margin: auto;
       border-radius: 2px;
@@ -89,7 +89,7 @@ html, body {
       }
     }
     &.is_active {
-      .__nav_br {
+      .__navi_br {
         &:nth-child(1) {
           transform: translateY(14px) rotate(-46deg);
         }
@@ -110,7 +110,7 @@ html, body {
     opacity: 0;
     z-index: -1;
     transition: all .3s;
-  &.nav_open {
+  &.navi_open {
       opacity: 1;
       z-index: 10;
   }

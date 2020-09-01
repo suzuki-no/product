@@ -4,5 +4,6 @@
     "/js/jquery.main.js": "/js/jquery.main.js",
     "/js/modal.js": "/js/modal.js",
     "/js/task.js": "/js/task.js",
-    "/js/todo.js": "/js/todo.js"
+    "/js/todo.js": "/js/todo.js",
+    "/js/wings.js": "/js/wings.js"
 }

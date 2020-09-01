@@ -92,3 +92,5 @@ DROP TABLE t_item_stock;
 php artisan make:model ItemStock -m
 php artisan migrate
 php artisan make:model Jquery -c
+
+php artisan make:model Wings -c
