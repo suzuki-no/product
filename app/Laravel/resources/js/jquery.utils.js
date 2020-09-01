@@ -73,7 +73,7 @@ Utils.NaviWeapper = {
         this.insertView();
         $("body").on("click", "#nav-button", function(){
           $(this).toggleClass('is_active');
-          $('#navi-weapper').toggleClass('nav_open');
+          $('#navi-weapper').toggleClass('navi_open');
         });
     },
     insertView: function(){
