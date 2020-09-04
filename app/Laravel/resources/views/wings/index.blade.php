@@ -9,10 +9,16 @@
 <div class="p10">
 <h2>これから始めるVue.js実践入門</h2>
 <div id="wings-app">
+  {{--
     @include('wings.list.2-17')
     @include('wings.list.2-23')
     @include('wings.list.2-26')
     @include('wings.list.3-7')
     @include('wings.list.3-17')
+    @include('wings.list.3-41')
+  --}}
+    @include('wings.list.3-50')
+    @include('wings.list.3-66')
+    @include('wings.list.3-93')
 </div>
 @endsection

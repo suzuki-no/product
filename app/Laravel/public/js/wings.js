@@ -31803,11 +31803,108 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     list329: {
       unit: {}
+    },
+    list341: {
+      show: true
+    },
+    list344: {
+      holiday: ''
+    },
+    list346: {
+      pay: 'credit'
+    },
+    list350: {
+      books: [{
+        isbn: '123-456-789-12',
+        title: 'タイトル１',
+        price: 2800
+      }, {
+        isbn: '123-456-789-14',
+        title: 'タイトル２',
+        price: 3600
+      }, {
+        isbn: '123-456-789-16',
+        title: 'タイトル３',
+        price: 1200
+      }, {
+        isbn: '123-456-789-18',
+        title: 'タイトル４',
+        price: 2400
+      }, {
+        isbn: '123-456-789-20',
+        title: 'タイトル５',
+        price: 3100
+      }]
+    },
+    list360: {
+      songs: [{
+        title: 'タイトル１',
+        lyrics: 'testtest',
+        composer: 'sample'
+      }, {
+        title: 'タイトル２',
+        lyrics: 'testtest',
+        composer: 'sample'
+      }, {
+        title: 'タイトル３',
+        lyrics: 'testtest',
+        composer: 'sample'
+      }, {
+        title: 'タイトル４',
+        lyrics: 'testtest',
+        composer: 'sample'
+      }]
+    },
+    list362: {
+      list: ['赤色', '緑色', '青色']
+    },
+    list366: {
+      attrs: {
+        size: 20,
+        maxlength: 14,
+        required: true
+      }
+    },
+    list369: {
+      text: 'Hello!! World!!'
+    },
+    list370: {
+      attr: 'width',
+      size: 100
+    },
+    list372: {
+      message: "<h6>wings</h6>\n      <img src=\"https://www.web-deli.com/image/linkbanner_l.gif\" alt=\"log\" />\n      "
+    },
+    list374: {
+      name: '匿名'
+    },
+    list376: {
+      color: {
+        backgroundColor: 'aqua',
+        color: 'red',
+        tapHighlightColor: 'aqua'
+      },
+      size: {
+        fontSize: '1.5em'
+      }
+    },
+    list382: {
+      colorClass: 'color',
+      frameClass: 'frame',
+      isChange: true
+    },
+    list395: {
+      result: '--'
     }
   },
   computed: {
     randomc: function randomc() {
       return Math.random();
+    },
+    expensiveBooks: function expensiveBooks() {
+      return this.list350.books.filter(function (b) {
+        return b.price >= 1500;
+      });
     }
   },
   watch: {
@@ -31816,12 +31913,12 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     }
   },
 
-  /* local filter
+  /* local filter */
   filters: {
-    numberFormat: function(value){
+    numberFormat: function numberFormat(value) {
       return Number(value).toLocaleString();
-    },
-  },*/
+    }
+  },
   methods: {
     getUpper: function getUpper() {
       this.list226.upperName = this.list226.name.toUpperCase();
@@ -31831,6 +31928,31 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     onchange: function onchange(value) {
       console.log(this.list329.unit.name + '：' + this.list329.unit.size);
+    },
+    onclick: function onclick() {
+      if (this.list362.list[1] === '緑色') {
+        vue__WEBPACK_IMPORTED_MODULE_0___default.a.set(this.list362.list, 1, '黄色');
+      } else {
+        vue__WEBPACK_IMPORTED_MODULE_0___default.a.set(this.list362.list, 1, '緑色');
+      }
+    },
+    onclick395: function onclick395() {
+      this.list395.result = Math.floor(Math.random() * 100) + 1;
+    },
+    onsubmit: function onsubmit(e) {
+      if (!confirm('送信してもよいですか')) {
+        e.preventDefalt();
+        return;
+      }
+    },
+    onParentClick: function onParentClick(val) {
+      console.log(val + " run");
+    },
+    onCurrentClick: function onCurrentClick(val) {
+      console.log(val + " run");
+    },
+    onChildClick: function onChildClick(val) {
+      console.log(val + " run");
     }
   },
   created: function created() {
@@ -31844,11 +31966,10 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     clearInterval(this.timer);
   }
 });
-/* global filter */
-
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('numberFormat', function (val) {
+/* global filter
+Vue.filter('numberFormat', function(val){
   return Number(val).toLocaleString();
-});
+}); */
 
 /***/ }),
 

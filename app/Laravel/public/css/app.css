@@ -916,6 +916,10 @@ body {
   transform: translateY(-20px);
 }
 
+[v-cloak] {
+  display: none;
+}
+
 /**
 * views item
 */
