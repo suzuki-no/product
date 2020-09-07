@@ -1,10 +1,20 @@
 require('./app');
 require('./navi');
 import Vue from 'vue';
+Vue.component('my-hello',{
+  template: `<div>Hellow!!, {{ name41 }}!</div>`,
+  data: function(){
+    return {
+       name41: 'Vue.js',
+    }
+  }
+});
 let Wings = new Vue({
   el: '#wings-app',
   data: {
-    tabSelect: 217,
+    category: 2,
+    listelect: 217,
+    compSelect: 42,
     list223: {
       author: 'Loding...',
     },

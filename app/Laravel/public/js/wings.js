@@ -31769,10 +31769,20 @@ __webpack_require__(/*! ./app */ "./resources/js/app.js");
 __webpack_require__(/*! ./navi */ "./resources/js/navi.js");
 
 
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-hello', {
+  template: "<div>Hellow!!, {{ name41 }}!</div>",
+  data: function data() {
+    return {
+      name41: 'Vue.js'
+    };
+  }
+});
 var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#wings-app',
   data: {
-    tabSelect: 217,
+    category: 2,
+    listelect: 217,
+    compSelect: 42,
     list223: {
       author: 'Loding...'
     },
