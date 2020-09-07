@@ -1,7 +1,7 @@
 <!--
   p93 配列処理
 -->
-<h4>配列処理</h4>
+<h2>配列処理</h2>
 <div class="3_50">
   <table class="table" v-if="expensiveBooks.length">
     <th>No</th><th>ISBN</th><th>書名</th><th>価格</th>

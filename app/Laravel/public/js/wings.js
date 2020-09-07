@@ -31772,6 +31772,7 @@ __webpack_require__(/*! ./navi */ "./resources/js/navi.js");
 var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#wings-app',
   data: {
+    tabSelect: 217,
     list223: {
       author: 'Loding...'
     },
@@ -31895,6 +31896,9 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     list395: {
       result: '--'
+    },
+    list397: {
+      consoleLog: ''
     }
   },
   computed: {
@@ -31947,12 +31951,15 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     onParentClick: function onParentClick(val) {
       console.log(val + " run");
+      this.list397.consoleLog = this.list397.consoleLog + '<p class="m0 fwN">' + val + ' run</p>';
     },
     onCurrentClick: function onCurrentClick(val) {
       console.log(val + " run");
+      this.list397.consoleLog = this.list397.consoleLog + '<p class="m0 fwN">' + val + ' run</p>';
     },
     onChildClick: function onChildClick(val) {
       console.log(val + " run");
+      this.list397.consoleLog = this.list397.consoleLog + '<p class="m0 fwN">' + val + ' run</p>';
     }
   },
   created: function created() {

@@ -1,7 +1,7 @@
 <!--
   p107 データバインディング
 -->
-<h4>データバインディング</h4>
+<h2>データバインディング</h2>
 <form class="3_66">
   <label for="memo">メモ：</label>
   <input type="text" id="memo"v-bind="list366.attrs"/>

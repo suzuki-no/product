@@ -124,6 +124,10 @@
   font-weight: bold;
 }
 
+.fwN {
+  font-weight: normal;
+}
+
 .ttfN {
   text-transform: none;
 }

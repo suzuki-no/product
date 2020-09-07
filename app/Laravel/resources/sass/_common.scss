@@ -36,6 +36,7 @@
 // font-weight
 .fw{
   &B{ font-weight: bold; }
+  &N{ font-weight: normal;}
 }
 .ttf{
   &N{ text-transform: none; }

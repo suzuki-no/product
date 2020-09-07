@@ -4,6 +4,7 @@ import Vue from 'vue';
 let Wings = new Vue({
   el: '#wings-app',
   data: {
+    tabSelect: 217,
     list223: {
       author: 'Loding...',
     },
@@ -141,6 +142,9 @@ let Wings = new Vue({
     list395: {
       result: '--',
     },
+    list397: {
+      consoleLog: '',
+    }
   },
   computed: {
       randomc: function() {
@@ -190,12 +194,15 @@ let Wings = new Vue({
     },
     onParentClick: function(val){
       console.log(val+" run");
+      this.list397.consoleLog = this.list397.consoleLog+'<p class="m0 fwN">'+val+' run</p>';
     },
     onCurrentClick: function(val){
       console.log(val+" run");
+      this.list397.consoleLog = this.list397.consoleLog+'<p class="m0 fwN">'+val+' run</p>';
     },
     onChildClick: function(val){
       console.log(val+" run");
+      this.list397.consoleLog = this.list397.consoleLog+'<p class="m0 fwN">'+val+' run</p>';
     },
   },
   created() {

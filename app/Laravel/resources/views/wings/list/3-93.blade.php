@@ -1,7 +1,7 @@
 <!--
   p125 より高度なイベント処理
 -->
-<h4>より高度なイベント処理</h4>
+<h2>より高度なイベント処理</h2>
 <form class="3_93" v-on:submit="onsubmit">
  <label for="email"></label>
  <input id="email" name="email" type="email"/>
@@ -14,10 +14,11 @@
 </div>
 
 <div class="3_97">
-  <div v-on:click="onParentClick('parent')" >parent div
-    <div v-on:click.self="onCurrentClick('current')" >current div
-      <div v-on:click.self="onChildClick('child')" >child div
+  <div v-on:click="onParentClick('parent')" >Click here!!>> parent div
+    <div v-on:click.self="onCurrentClick('current')" >Click here!!>> current div
+      <div v-on:click.self="onChildClick('child')" >Click here!!>> child div
       </div>
     </div>
   </div>
+  <div v-html="list397.consoleLog"></div>
 </div>
