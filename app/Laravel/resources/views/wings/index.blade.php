@@ -45,9 +45,13 @@
           <div class="tab_container">
               <div class="tab_category">
                 <a href="javascript:void(0)" v-on:click="compSelect=42" v-bind:class='{select:compSelect === 42}'>42</a>
+                <a href="javascript:void(0)" v-on:click="compSelect=47" v-bind:class='{select:compSelect === 47}'>47</a>
+                <a href="javascript:void(0)" v-on:click="compSelect=419" v-bind:class='{select:compSelect === 419}'>419</a>
               </div>
               <div class="tab_content">
                 <div v-show="compSelect === 42" class="fwB">@include('wings.comp.4-2')</div>
+                <div v-show="compSelect === 47" class="fwB">@include('wings.comp.4-7')</div>
+                <div v-show="compSelect === 419" class="fwB">@include('wings.comp.4-19')</div>
               </div>
           </div>
         </div>

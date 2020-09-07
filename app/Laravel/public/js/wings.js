@@ -31770,15 +31770,82 @@ __webpack_require__(/*! ./navi */ "./resources/js/navi.js");
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-hello', {
-  template: "<div>Hellow!!, {{ name41 }}!</div>",
+  props: {
+    'yourName': {
+      type: String,
+      required: true,
+      "default": 'no name'
+    }
+  },
+  template: "<div v-cloak>Hello!!,{{ yourName }}! GoodBye!!,{{ name41 }}</div>",
   data: function data() {
     return {
       name41: 'Vue.js'
     };
   }
 });
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-counter', {
+  props: ['init'],
+  template: "<div v-cloak>\u73FE\u5728\u5024\uFF1A{{ current }}\n            <input type=\"button\" v-on:click=\"onclik47(1)\" value=\"\u5897\u3084\u3059\"/>\n            <input type=\"button\" v-on:click=\"onclik47(-1)\" value=\"\u6E1B\u3089\u3059\"/></div>",
+  data: function data() {
+    return {
+      current: this.init
+    };
+  },
+  methods: {
+    onclik47: function onclik47(val) {
+      this.current = Number(this.current) + Number(val);
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-counter-2', {
+  props: ['step'],
+  template: "<button type=\"button\" v-on:click=\"onclick412\">{{ step }}</button>",
+  methods: {
+    onclick412: function onclick412() {
+      this.$emit('plus', Number(this.step));
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-child', {
+  data: function data() {
+    return {
+      message: ''
+    };
+  },
+  template: "<p>\u5B50\uFF1A{{ message }}</p>",
+  mounted: function mounted() {
+    this.$parent.comp417.message = '子から設定';
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-hello-419', {
+  props: ['yourName'],
+  template: "<div>Hello!! <slot>guest</slot>!!</div>"
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-slot', {
+  template: "\n  <div>\n    <header>\n      <slot name=\"header\">DEFAULT HEADER</slot>\n    </header>\n    <div>\n      <slot>DEFAULT MAIN</slot>\n    </div>\n    <footer>\n      <slot name=\"footer\">DEFAULT FOOTER</slot>\n    </footer>\n  </div>"
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-book', {
+  data: function data() {
+    return {
+      book: {
+        isbn: '123-456-789-0',
+        title: 'さんぷる書籍',
+        price: 2000,
+        publish: 'さんぷる出版'
+      }
+    };
+  },
+  template: "\n  <div>\n    <slot v-bind:book=\"book\">{{ book.title }}({{ book.publish }})</slot>\n  </div>"
+});
+var MyHello = {
+  template: "<div>Hello?,Vue.js!</div>"
+};
 var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#wings-app',
+  components: {
+    'my-hello-local': MyHello
+  },
   data: {
     category: 2,
     listelect: 217,
@@ -31909,6 +31976,12 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     list397: {
       consoleLog: ''
+    },
+    comp412: {
+      current: 0
+    },
+    comp417: {
+      message: ''
     }
   },
   computed: {
@@ -31970,6 +32043,9 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     onChildClick: function onChildClick(val) {
       console.log(val + " run");
       this.list397.consoleLog = this.list397.consoleLog + '<p class="m0 fwN">' + val + ' run</p>';
+    },
+    onplus: function onplus(val) {
+      this.comp412.current += val;
     }
   },
   created: function created() {
@@ -31981,6 +32057,9 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   },
   beforeDestroy: function beforeDestroy() {
     clearInterval(this.timer);
+  },
+  mounted: function mounted() {
+    this.$refs.child.message = '親から設定';
   }
 });
 /* global filter

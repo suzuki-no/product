@@ -1,16 +1,100 @@
 require('./app');
 require('./navi');
 import Vue from 'vue';
+
 Vue.component('my-hello',{
-  template: `<div>Hellow!!, {{ name41 }}!</div>`,
+  props: {
+    'yourName': {
+      type: String,
+      required: true,
+      default: 'no name',
+    }
+  },
+  template: `<div v-cloak>Hello!!,{{ yourName }}! GoodBye!!,{{ name41 }}</div>`,
   data: function(){
     return {
        name41: 'Vue.js',
     }
   }
 });
+Vue.component('my-counter',{
+  props: ['init'],
+  template: `<div v-cloak>現在値：{{ current }}
+            <input type="button" v-on:click="onclik47(1)" value="増やす"/>
+            <input type="button" v-on:click="onclik47(-1)" value="減らす"/></div>`,
+  data: function(){
+    return {
+       current: this.init,
+    }
+  },
+  methods: {
+    onclik47: function(val){
+      this.current = Number(this.current) + Number(val);
+    }
+  },
+});
+Vue.component('my-counter-2',{
+  props: ['step'],
+  template: `<button type="button" v-on:click="onclick412">{{ step }}</button>`,
+  methods: {
+    onclick412: function(){
+      this.$emit('plus', Number(this.step));
+    }
+  },
+});
+Vue.component('my-child',{
+  data: function(){
+    return {
+      message: '',
+    }
+  },
+  template: `<p>子：{{ message }}</p>`,
+  mounted() {
+    this.$parent.comp417.message = '子から設定';
+  },
+});
+Vue.component('my-hello-419',{
+  props: ['yourName'],
+  template: `<div>Hello!! <slot>guest</slot>!!</div>`,
+});
+Vue.component('my-slot',{
+  template: `
+  <div>
+    <header>
+      <slot name="header">DEFAULT HEADER</slot>
+    </header>
+    <div>
+      <slot>DEFAULT MAIN</slot>
+    </div>
+    <footer>
+      <slot name="footer">DEFAULT FOOTER</slot>
+    </footer>
+  </div>`,
+});
+Vue.component('my-book',{
+  data: function(){
+    return {
+      book: {
+        isbn: '123-456-789-0',
+        title: 'さんぷる書籍',
+        price: 2000,
+        publish: 'さんぷる出版',
+      }
+    };
+  },
+  template: `
+  <div>
+    <slot v-bind:book="book">{{ book.title }}({{ book.publish }})</slot>
+  </div>`,
+});
+let MyHello ={
+  template: `<div>Hello?,Vue.js!</div>`
+};
 let Wings = new Vue({
   el: '#wings-app',
+  components: {
+    'my-hello-local': MyHello
+  },
   data: {
     category: 2,
     listelect: 217,
@@ -154,6 +238,12 @@ let Wings = new Vue({
     },
     list397: {
       consoleLog: '',
+    },
+    comp412: {
+      current: 0,
+    },
+    comp417: {
+      message: '',
     }
   },
   computed: {
@@ -214,6 +304,9 @@ let Wings = new Vue({
       console.log(val+" run");
       this.list397.consoleLog = this.list397.consoleLog+'<p class="m0 fwN">'+val+' run</p>';
     },
+    onplus: function(val){
+      this.comp412.current +=val;
+    },
   },
   created() {
       let that =this;
@@ -224,6 +317,9 @@ let Wings = new Vue({
   },
   beforeDestroy() {
       clearInterval(this.timer);
+  },
+  mounted() {
+    this.$refs.child.message = '親から設定';
   },
 });
 /* global filter
