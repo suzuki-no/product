@@ -31884,15 +31884,27 @@ var tabApp = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
 /***/ }),
 
+/***/ "./resources/sass/wings.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/wings.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************!*\
-  !*** multi ./resources/js/item.js ./resources/sass/app.scss ***!
-  \**************************************************************/
+/*!******************************************************************************************!*\
+  !*** multi ./resources/js/item.js ./resources/sass/app.scss ./resources/sass/wings.scss ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/vagrant/code/Laravel/resources/js/item.js */"./resources/js/item.js");
-module.exports = __webpack_require__(/*! /home/vagrant/code/Laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/vagrant/code/Laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/vagrant/code/Laravel/resources/sass/wings.scss */"./resources/sass/wings.scss");
 
 
 /***/ })

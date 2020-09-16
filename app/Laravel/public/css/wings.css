@@ -1,0 +1,51 @@
+#panel-511 {
+  border: solid 1px #000;
+  width: 350px;
+  background-color: #acffff;
+  overflow: hidden;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s;
+}
+
+.v-leave-active {
+  position: absolute;
+}
+
+.v-enter {
+  opacity: 0;
+}
+
+.v-enter-to {
+  opacity: 1;
+}
+
+.v-leave {
+  opacity: 1;
+}
+
+.v-leave-to {
+  opacity: 0;
+}
+
+.comp519-enter-active,
+.comp519-leave-active {
+  transition: opacity 5s;
+}
+
+.comp519-leave-active {
+  position: absolute;
+}
+
+.comp519-enter,
+.comp519-leave-to {
+  opacity: 0;
+}
+
+.comp519-enter-to,
+.comp519-leave {
+  opacity: 1;
+}
+

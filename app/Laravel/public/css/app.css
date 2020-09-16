@@ -20,6 +20,18 @@
   }
 }
 
+.pA {
+  position: absolute;
+}
+
+.pR {
+  position: relative;
+}
+
+.pF {
+  position: fixed;
+}
+
 .dN {
   display: none;
 }

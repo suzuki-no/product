@@ -1,3 +1,9 @@
+// position
+.p{
+  &A{ position: absolute; }
+  &R{ position: relative; }
+  &F{ position: fixed; }
+}
 // display
 .d{
   &N{ display: none; }

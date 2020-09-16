@@ -31838,6 +31838,133 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-book', {
   },
   template: "\n  <div>\n    <slot v-bind:book=\"book\">{{ book.title }}({{ book.publish }})</slot>\n  </div>"
 });
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('banner-member', {
+  template: "\n  <div class=\"banner\">\n    <h3>TEST Banner! ver.1</h3>\n    <p>member content...member content...member content...member content...</p>\n  </div>"
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('banner-new', {
+  template: "\n  <div class=\"banner\">\n    <h3>TEST Banner! ver.2</h3>\n    <p>new content...new content...new content...new content...</p>\n  </div>"
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('banner-env', {
+  template: "\n  <div class=\"banner\">\n    <h3>TEST Banner! ver.3</h3>\n    <p>env content...env content...env content...env content...</p>\n  </div>"
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('tab-member', {
+  template: "\n  <div class=\"tab\">\n    <p>test tab member<br>\n      begin member vue.js</p>\n      <label>\u540D\u524D\uFF1A<input type=\"text\" v-model=\"name\"/></label>\n      <input type=\"submit\" value=\"\u767B\u9332\">\n    </p>\n  </div>\n  ",
+  data: function data() {
+    return {
+      name: ''
+    };
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('tab-new', {
+  template: "\n  <div class=\"tab\">\n    <p>test tab new<br>\n      begin new vue.js</p>\n    </p>\n  </div>\n  "
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('tab-env', {
+  template: "\n  <div class=\"tab\">\n    <p>test tab env<br>\n      begin env vue.js</p>\n    </p>\n  </div>\n  "
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-input', {
+  props: ['value'],
+
+  /*
+  template: `
+  <label>
+    名前：<input type="text" v-bind:value="value" v-on:input="$emit('input', $event.target.value)"/>
+  </label>
+  `,
+  */
+  template: "\n    <label>\n      \u540D\u524D\uFF1A\n      <input type=\"text\" v-model.lazy=\"internalValue\" />\n    </label>\n  ",
+  computed: {
+    internalValue: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(newValue) {
+        if (this.value !== newValue) {
+          this.$emit('input', newValue);
+        }
+      }
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-input-572', {
+  props: ['name'],
+  model: {
+    prop: 'name',
+    event: 'change'
+  },
+
+  /*
+  template: `
+  <label>
+    名前：
+    <input type="text" v-bind:value="name" v-on:input="$emit('change', $event.target.value)"/>
+  </label>
+  `,
+  */
+  template: "\n    <label>\n      \u540D\u524D\uFF1A\n      <input type=\"text\" v-model.lazy=\"internalValue\" />\n    </label>\n  ",
+  computed: {
+    internalValue: {
+      get: function get() {
+        return this.name;
+      },
+      set: function set(newValue) {
+        if (this.name !== newValue) {
+          this.$emit('input', newValue);
+        }
+      }
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-input-59', {
+  props: ['value'],
+  template: "\n  <label>\n    \u540D\u524D\uFF1A\n    <input type=\"text\" v-bind:value=\"value\" v-on:input=\"$emit('update:value', $event.target.value)\"/>\n  </label>\n  "
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-hello-533', {
+  data: function data() {
+    return {
+      name533: 'Vue.js'
+    };
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('my-loading', {
+  props: ['type'],
+  data: function data() {
+    return {
+      src: 'loading.gif'
+    };
+  },
+  render: function render(h) {
+    var _this = this;
+
+    switch (this.type) {
+      case 'text':
+        return h('p', '...Now Loading...');
+
+      case 'image':
+        return h('img', {
+          attrs: {
+            src: this.src,
+            alt: 'loading'
+          },
+          on: {
+            error: function error() {
+              _this.src = './img/noimage.jpg';
+            }
+          }
+        });
+
+      default:
+        console.log('type属性はimage、textいずれか');
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.directive('setcolor', {
+  bind: function bind(el, binding, vnode, oldVnode) {
+    el.style.backgroundColor = binding.value;
+  },
+  update: function update(el, binding, vnode, oldVnode) {
+    el.style.backgroundColor = binding.value;
+  }
+});
 var MyHello = {
   template: "<div>Hello?,Vue.js!</div>"
 };
@@ -31847,9 +31974,10 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     'my-hello-local': MyHello
   },
   data: {
-    category: 2,
+    category: 3,
     listelect: 217,
     compSelect: 42,
+    partsSelect: 61,
     list223: {
       author: 'Loding...'
     },
@@ -31982,6 +32110,59 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     comp417: {
       message: ''
+    },
+    comp51: {
+      current: 0,
+      components: ['member', 'new', 'env']
+    },
+    comp54: {
+      current: 'member',
+      tabs: {
+        'member': 'メンバー',
+        'new': '新着',
+        'env': '設定'
+      }
+    },
+    comp57: {
+      message: '匿名'
+    },
+    comp572: {
+      message: '匿名'
+    },
+    comp59: {
+      message: '匿名'
+    },
+    comp511: {
+      flag: true
+    },
+    comp518: {
+      flag: true
+    },
+    comp519: {
+      id: 0,
+      panels: ['panels test display 1...,panels test display 1...,panels test display 1...', 'panels test display 2...,panels test display 2...,panels test display 2...', 'panels test display 3...,panels test display 3...,panels test display 3...']
+    },
+    comp524: {
+      flag: true
+    },
+    comp525: {
+      flag: true
+    },
+    parts61: {
+      color: '#ff0'
+    },
+    parts63: {
+      color: '#f00',
+      options: [{
+        val: 'yellow',
+        name: '黄色'
+      }, {
+        val: '#f00',
+        name: '赤色'
+      }, {
+        val: 'rgba(0, 255, 255, .8)',
+        name: '青色'
+      }]
     }
   },
   computed: {
@@ -31992,6 +32173,15 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       return this.list350.books.filter(function (b) {
         return b.price >= 1500;
       });
+    },
+    currentBanner: function currentBanner() {
+      return 'banner-' + this.comp51.components[this.comp51.current];
+    },
+    tabNames: function tabNames() {
+      return Object.keys(this.comp54.tabs);
+    },
+    currentTab: function currentTab() {
+      return 'tab-' + this.comp54.current;
     }
   },
   watch: {
@@ -32046,6 +32236,40 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     },
     onplus: function onplus(val) {
       this.comp412.current += val;
+    },
+    onclick54: function onclick54(val) {
+      this.comp54.current = val;
+    },
+    onclick511: function onclick511() {
+      this.comp511.flag = !this.comp511.flag;
+    },
+    onclick518: function onclick518() {
+      this.comp518.flag = !this.comp518.flag;
+    },
+    onclick519: function onclick519() {
+      this.comp519.id = (this.comp519.id + 1) % this.comp519.panels.length;
+    },
+    onclick524: function onclick524() {
+      this.comp524.flag = !this.comp524.flag;
+    },
+    onclick525: function onclick525() {
+      this.comp525.flag = !this.comp525.flag;
+    },
+    onenter525: function onenter525(el, done) {
+      Velocity(el, {
+        opacity: 1
+      }, {
+        duration: 1000,
+        complete: done
+      });
+    },
+    onleave525: function onleave525(el, done) {
+      Velocity(el, {
+        opacity: 0
+      }, {
+        duration: 1000,
+        complete: done
+      });
     }
   },
   created: function created() {
@@ -32053,10 +32277,14 @@ var Wings = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     that.timer = setTimeout(function () {
       that.list223.author = 'Now starting';
     }, 3000);
+    that.interval = setInterval(function () {
+      that.comp51.current = (that.comp51.current + 1) % that.comp51.components.length;
+    }, 3000);
     this.delayFunc = _.debounce(this.getUpper, 2000);
   },
   beforeDestroy: function beforeDestroy() {
-    clearInterval(this.timer);
+    clearTimeout(this.timer);
+    clearInterval(this.interval);
   },
   mounted: function mounted() {
     this.$refs.child.message = '親から設定';
