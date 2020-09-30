@@ -22,7 +22,7 @@
 <div class="3_74">
   <form>
     <label for="name">氏名：</label>
-    <input type="text" id="name" v-model.lazy="list374.name"/>
+    <input type="text" id="name374" v-model.lazy="list374.name"/>
   </form>
   <div v-once v-cloak>初めまして@{{ list374.name }}</div>
   <div v-cloak>初めまして@{{ list374.name }}</div>

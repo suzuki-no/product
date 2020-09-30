@@ -936,6 +936,18 @@ body {
   display: none;
 }
 
+.el-carousel__item {
+  height: 250px;
+  background-color: #98e7e7;
+  color: #000;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.el-carousel__item div {
+  margin: 15px;
+}
+
 /**
 * views item
 */

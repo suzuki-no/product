@@ -1,10 +1,12 @@
 @extends('layout')
 @section('title', 'wingsプロジェクト サンプル実行')
 @section('pageCss')
+{{--<link rel="stylesheet" href="{{ asset('https://unpkg.com/element-ui/lib/theme-chalk/index.css')}}"></link>--}}
 @endsection
 @section('pageJs')
 <script src="{{ asset('js/wings.js')}}"></script>
 <script src="{{ asset('js/velocity.min.js')}}"></script>
+{{--<script src="{{ asset('https://unpkg.com/element-ui/lib/index.js')}}"></script>--}}
 @endsection
 @section('content')
 <div class="p10">
@@ -15,6 +17,7 @@
         <a href="javascript:void(0)" v-on:click="category=1" v-bind:class='{select:category === 1}'>list</a>
         <a href="javascript:void(0)" v-on:click="category=2" v-bind:class='{select:category === 2}'>comp</a>
         <a href="javascript:void(0)" v-on:click="category=3" v-bind:class='{select:category === 3}'>parts</a>
+        <a href="javascript:void(0)" v-on:click="category=4" v-bind:class='{select:category === 4}'>router</a>
       </div>
       <div class="tab_content">
         <div v-show="category === 1" class="fwB">
@@ -73,6 +76,18 @@
               </div>
           </div>
         </div>
+        {{--
+        <div v-show="category === 4" class="fwB">
+          <div class="tab_container">
+              <div class="tab_category">
+                <a href="javascript:void(0)" v-on:click="partsSelect=82" v-bind:class='{select:partsSelect === 82}'>82</a>
+              </div>
+              <div class="tab_content">
+                <div v-show="partsSelect === 82" class="fwB">@include('wings.router.8-2')</div>
+              </div>
+          </div>
+        </div>
+        --}}
       </div>
   </div>
 

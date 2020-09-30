@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "vee-validate": "^3.4.0",
         "vue-router": "^3.4.3",
         "webpack": "^4.43.0"
     }

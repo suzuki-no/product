@@ -7,7 +7,7 @@
     <div class="3_17">
       <input type="datetime-local" id="date" v-model="list317.date" />
       <label for="name">氏名：</label>
-      <input type="text" id="name" v-model.lazy="list317.myName" />
+      <input type="text" id="name317" v-model.lazy="list317.myName" />
     </div>
     <div class="3_19">
       <label for="dog">いぬ</label>

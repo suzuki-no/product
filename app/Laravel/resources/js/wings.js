@@ -1,7 +1,38 @@
 require('./app');
 require('./navi');
 import Vue from 'vue';
+import Router from 'vue-router';
+//import Home from '../views/router/Home.vue';
 
+//Vue.use(Router);
+/*
+const WingsRouter Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: ()=>import('../views/router/About.vue')
+    }
+  ]
+})
+*/
+//import VeeValidate from 'vee-validate';
+//import VeeJa from 'vee-validate/dist/locale/ja';
+/*
+Vue.use(VeeValidate, {
+  locale: 'ja',
+  dictionary: {
+    ja: VeeJa
+  }
+})
+*/
 Vue.component('my-hello',{
   props: {
     'yourName': {
@@ -246,8 +277,37 @@ Vue.directive('setcolor', {
       el.style.backgroundColor = binding.value;
     },
     update: function(el, binding, vnode, oldVnode){
+      if(binding.value === binding.oldValue) return;
       el.style.backgroundColor = binding.value;
     }
+});
+Vue.filter('trim', function(value){
+  if(typeof value !== 'string'){
+    return value;
+  }
+  return value.trim();
+});
+Vue.filter('nl2br', function(value){
+  if(typeof value !== 'string'){
+    return value;
+  }
+  return value.replace(/\r?\n/g, '<br>');
+});
+Vue.filter('truncate', function(value, len = 10, omit = '...'){
+  if(typeof value !== 'string'){
+    return value;
+  }
+  if(value.length <= len){
+    return value;
+  }else{
+    return value.substring(0, len) + omit;
+  }
+});
+Vue.filter('abs', function(value){
+  return Math.abs(value);
+});
+Vue.filter('number', function(value, dec = 0){
+  return value.toFixed(dec);
 });
 
 let MyHello ={
@@ -460,6 +520,30 @@ let Wings = new Vue({
         {val: '#f00', name: '赤色'},
         {val: 'rgba(0, 255, 255, .8)', name: '青色'},
       ]
+    },
+    parts66:{
+      free: '',
+      color: 'yellow',
+      options: [
+        {val: 'yellow', name: '黄色'},
+        {val: 'red', name: '赤色'},
+        {val: 'blue', name: '青色'},
+      ]
+    },
+    parts616:{
+      str: ' WINGS PROJECT',
+    },
+    parts618:{
+      memo: '',
+    },
+    parts620:{
+      memo: '',
+    },
+    parts622:{
+      num: 0,
+    },
+    parts624:{
+      num: 0,
     },
   },
   computed: {
