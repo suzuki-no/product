@@ -31,6 +31,7 @@ Route::get('/items/details', 'ItemController@details');
 Route::get('/tasks', 'TaskController@index')->name('task');
 Route::get('/todos', 'TodoController@index')->name('todo');
 Route::get('/jquerys', 'JqueryController@index')->name('jquery');
+Route::get('/vanilla', function(){return view('vanilla/index');})->name('vanilla');
 Route::get('/wings', function(){return view('wings/index');})->name('wings');
 /*
 Route::get('/{any}', function($any){

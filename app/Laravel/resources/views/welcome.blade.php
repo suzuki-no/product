@@ -87,6 +87,7 @@
                     <a href="{{ url('/items') }}">items</a>
                     <a href="{{ url('/modal') }}">modal</a>
                     <a href="{{ url('/jquerys') }}">jquerys</a>
+                    <a href="{{ url('/vanilla ') }}">vanilla</a>
                     <a href="{{ url('/wings') }}">wings</a>
                 </div>
 
